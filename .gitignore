@@ -1,0 +1,33 @@
+# ===== Sistema operativo =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== VS Code =====
+.vscode/
+
+# ===== Logs / temporales =====
+*.log
+*.tmp
+*.temp
+
+# ===== Dependencias (si llegaran a usar Composer o Node) =====
+vendor/
+composer.lock
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ===== Archivos generados / builds =====
+dist/
+build/
+coverage/
+
+# ===== Variables/secretos (MUY importante) =====
+.env
+.env.*
+!.env.example
+
+# ===== Cache PHP (si aplica) =====
+*.cache
