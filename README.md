@@ -9,11 +9,11 @@ La pltaforma busca brindar información clara, confiable y accesible sobre hábi
 - Desarrollar una página web que contribuya a la difusión del ODS3, promoviendo estilos de vida saludables y el cuidado integral de la salud.
 </p>
 
-#Alcance
+# Alcance
 <p>
 **Vitalis** está dirigido a estudiantes y al público en general.  El sistema contempla secciones informativas, recursos vitales y el uso de una base de datos para el almacenamiento y gestión de contenidos.
 </p>
-#Tecnologías utilizadas
+# Tecnologías utilizadas
 <ul>
 <ill>HTML</ill>
 <ill>CSS</ill>
