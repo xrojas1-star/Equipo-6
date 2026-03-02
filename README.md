@@ -8,8 +8,7 @@
   <img src="https://img.shields.io/badge/-Página web-turquoise">
   <img src="https://img.shields.io/badge/estado-en proceso-teal">
   <p align="center">
-  <img src="https://img.shields.io/badge/ODS3%20Salud%yB3n%20por%20el%20clima-sakyblue">
-</p>
+  <img src="https://img.shields.io/badge/ODS-3%20Salud%20y%20bienestar-brightgreen">
 </p>
 <p>
 *Vitalis* es un proyecto que consiste en el desarrollo de una página web educativa orientada a la programación de la salud y el bienestar, basada en el Objetivo de Desarrollo Sostenible 3 (ODS 3).
