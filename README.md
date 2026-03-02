@@ -10,7 +10,7 @@
   <p align="center">
   <img src="https://img.shields.io/badge/ODS-3%20Salud%20y%20bienestar-blue">
 </p>
-<p>
+
 **Vitalis** es un proyecto que consiste en el desarrollo de una página web educativa orientada a la programación de la salud y el bienestar, basada en el Objetivo de Desarrollo Sostenible 3 (ODS 3).
 La pltaforma busca brindar información clara, confiable y accesible sobre hábitos saludables, prevención de enfermedades y bienestar integral, apoyando la concientización de los usuarios mediante contenidos digitales.
 </p>
@@ -21,7 +21,6 @@ La pltaforma busca brindar información clara, confiable y accesible sobre hábi
 </p>
 
 # Alcance
-<p>
 **Vitalis** está dirigido a estudiantes y al público en general.  El sistema contempla secciones informativas, recursos vitales y el uso de una base de datos para el almacenamiento y gestión de contenidos.
 </p>
 # Tecnologías utilizadas
