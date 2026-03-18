@@ -3,13 +3,9 @@
 </p>
 <h1 align="center">V  I  T  A  L  I  S</h1>
 <p align="center">
-  ![HTML](https://img.shields.io/badge/HECHO_CON-HTML-orange)
-![CSS](https://img.shields.io/badge/ESTILO-CSS-blue)
-  <img src="https://img.shields.io/badge/es viernes%20de-santo-royalblue">
-  <img src="https://img.shields.io/badge/-si cierto-turquoise">
-  <img src="https://img.shields.io/badge/- no se come-turquoise">
-  <img src="https://img.shields.io/badge/Mmm- pos ya que-teal">
-  <img src="https://img.shields.io/badge/Mmm- valiendo verga andamos -teal">
+  <img src="https://img.shields.io/badge/HECHO_CON-HTML-orange">
+  <img src="https://img.shields.io/badge/ESTILO-CSS-blue">
+  <img src="https://img.shields.io/badge/ESTADO-EN PROCESO-royalblue">
   <p align="center">
   <img src="https://img.shields.io/badge/ODS-3%20Salud%20y%20bienestar-blue">
 </p>
