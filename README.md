@@ -4,7 +4,7 @@
 <h1 align="center">V  I  T  A  L  I  S</h1>
 <p align="center">
   <img src="https://img.shields.io/badge/HECHO_CON-HTML-light green">
-  <img src="https://img.shields.io/badge/ESTILO-CSS-">
+  <img src="https://img.shields.io/badge/ESTILO-CSS">
   <img src="https://img.shields.io/badge/ESTADO-EN PROCESO-lime green">
   <p align="center">
   <img src="https://img.shields.io/badge/ODS-3%20Salud%20y%20bienestar-blue">
