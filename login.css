@@ -46,10 +46,12 @@ body{
 }
 
 .brand__logo{
-  height: 100px;
+  height: 200px;
   width: auto;
   display: block;
   object-fit: contain;
+  position: relative;
+  left: 40px;
 }
 
 h1{
@@ -118,7 +120,7 @@ h1{
 
 .login__right{
   min-height: 100vh;
-  background-image: url("img/fondo-pagina.png");
+  background-image: url("imagenes/fondo-pagina.png");
   background-size: cover;
   background-position: center;
 }
