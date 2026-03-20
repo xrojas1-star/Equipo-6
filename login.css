@@ -1,0 +1,158 @@
+:root{
+  --brand: #14b5d1;
+  --brand-dark: #0d9ab3;
+  --bg-left: #f3f3f3;
+  --text-title: #5a5e64;
+  --text-input: #6a6a6a;
+  --text-placeholder: #b8b8b8;
+  --text-forgot: #a9a9a9;
+  --line: #cfcfcf;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+}
+
+.login{
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1.1fr;
+}
+
+.login__left{
+  background: var(--bg-left);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 34px;
+}
+
+.panel{
+  width: min(420px, 100%);
+}
+
+.brand{
+  margin-bottom: 28px;
+}
+
+.brand__logo{
+  height: 100px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+h1{
+  margin: 0 0 25px;
+  font-size: 60px;
+  line-height: 0.95;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--text-title);
+}
+
+.form{
+  width: 100%;
+}
+
+.field{
+  display: block;
+  margin-bottom: 16px;
+}
+
+.field input{
+  width: 85%;
+  height: 52px;
+  padding: 0 20px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  outline: none;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-input);
+}
+
+.field input::placeholder{
+  color: var(--text-placeholder);
+}
+
+.btn{
+  width: 85%;
+  height: 55px;
+  margin-top: 4px;
+  border: none;
+  border-radius: 999px;
+  background: var(--brand);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background: var(--brand-dark);
+}
+
+.forgot{
+  width: 85%;
+  margin: 18px 0 0;
+  text-align: center;
+}
+
+.forgot a{
+  text-decoration: none;
+  color: var(--text-forgot);
+  font-size: 14px;
+}
+
+.login__right{
+  min-height: 100vh;
+  background-image: url("img/fondo-pagina.png");
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 900px){
+  .login{
+    grid-template-columns: 1fr;
+  }
+
+  .login__right{
+    min-height: 40vh;
+    order: -1;
+  }
+
+  .login__left{
+    padding: 24px 20px 40px;
+  }
+
+  .panel{
+    width: 100%;
+  }
+
+  .brand__logo{
+    height: 80px;
+  }
+
+  h1{
+    font-size: 42px;
+    margin-bottom: 24px;
+  }
+
+  .field input,
+  .btn,
+  .forgot{
+    width: 100%;
+  }
+}

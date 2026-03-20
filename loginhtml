@@ -1,0 +1,41 @@
+    # creacion de login
+    <!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vitalis | Iniciar sesión</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <main class="login">
+    <section class="login__left">
+      <div class="panel">
+        <header class="brand">
+          <img class="brand__logo" src="img/logovitalis.png" alt="Vitalis">
+        </header>
+
+        <h1>Bienvenido<br>de nuevo</h1>
+
+        <form class="form" action="#" method="post">
+          <label class="field">
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+          </label>
+
+          <label class="field">
+            <input type="password" name="password" placeholder="Contraseña" required>
+          </label>
+
+          <button class="btn" type="submit">Iniciar Sesión</button>
+
+          <p class="forgot">
+            <a href="#">¿Olvidaste tu contraseña?</a>
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <section class="login__right" aria-hidden="true"></section>
+  </main>
+</body>
+</html>
