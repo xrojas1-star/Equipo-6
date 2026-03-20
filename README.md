@@ -29,4 +29,13 @@ La pltaforma busca brindar información clara, confiable y accesible sobre hábi
 <ill>JavaScript</ill>
 <ill>SQL</ill>
 </ul>
+# Interfaces
 
+<p align="center">
+  <img src="imagenes/interfaz1.png" width="300">
+  <img src="imagenes/interfaz2.png" width="300">
+</p>
+
+<p align="center">
+Vista previa de las interfaces principales del sistema Vitalis.
+</p>
