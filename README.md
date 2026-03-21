@@ -37,4 +37,5 @@ Vista previa de las interfaces principales del sistema Vitalis.
 <p align="center">
   <img src="imagenes/blog.png" width="300">
   <img src="imagenes/login.png" width="300">
+  <img src="imagenes/inicio.png" width="300">
 </p>
