@@ -118,7 +118,7 @@ h1{
 
 .login__right{
   min-height: 100vh;
-  background-image: url("imagenes/fondo-pagina.png");
+  background-image: url("img/fondo-pagina.png");
   background-size: cover;
   background-position: center;
 }

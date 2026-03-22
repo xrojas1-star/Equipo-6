@@ -11,7 +11,7 @@
     <section class="login__left">
       <div class="panel">
         <header class="brand">
-          <img class="brand__logo" src="imagenes/logovitalis.png" alt="Vitalis">
+          <img class="brand__logo" src="img/logovitalis.png" alt="Vitalis">
         </header>
 
         <h1>Bienvenido<br>de nuevo</h1>

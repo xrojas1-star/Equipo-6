@@ -1,0 +1,123 @@
+:root {
+  --brand: #14b5d1;
+  --brand-dark: #0d9ab3;
+  --bg-left: #ffffff; /* Cambiado a blanco para que combine con el logo */
+  --text-title: #5a5e64;
+  --text-subtitle: #6a6a6a;
+  --line: #cfcfcf;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.login {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Mitad y mitad */
+  min-height: 100vh;
+}
+
+.login__left {
+  background: var(--bg-left);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.panel {
+    padding-top: 130px; 
+    position: relative;
+  width: min(500px, 100%);
+}
+.brand {
+    margin: 0;
+    position: absolute;
+    top: 0;         
+    left: 0;        
+    width: 100%; 
+    z-index: 10;     
+}
+
+.brand__logo {
+    height: 120px; 
+    width: auto;     
+    display: block;  
+    object-fit: contain; 
+    margin: 0;
+}
+
+h1 {
+  font-size: 65px; 
+  line-height: 1;
+  font-weight: 800;
+  color: var(--text-title);
+  margin-bottom: 20px;
+  letter-spacing: -2px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--text-subtitle);
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 55px;
+  border-radius: 999px;
+  background: var(--brand);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn--secondary {
+  background: transparent;
+  border: 2px solid var(--brand);
+  color: var(--brand);
+}
+
+.btn:hover {
+  background: var(--brand-dark);
+  color: white;
+}
+
+.login__right {
+  background-image: url("imagenes/inicio-pagina.png");
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 900px) {
+  .login {
+    grid-template-columns: 1fr;
+  }
+  .login__right {
+    height: 30vh;
+    order: -1; /* La imagen sube en el celular */
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .actions {
+    flex-direction: column;
+  }
+}
