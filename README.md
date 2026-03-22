@@ -14,14 +14,21 @@
 La pltaforma busca brindar información clara, confiable y accesible sobre hábitos saludables, prevención de enfermedades y bienestar integral, apoyando la concientización de los usuarios mediante contenidos digitales.
 </p>
 
-# Objetivo del proyecto
+# Objetivo Del Proyecto
 <p>
 - Desarrollar una página web que contribuya a la difusión del ODS3, promoviendo estilos de vida saludables y el cuidado integral de la salud.
 </p>
 
-# Propuesta de valor
+# Propuesta De Valor
 <p>
 Vitalis nace para centralizar la gestión de salud preventiva, permitiendo a los usuarios monitorear su bienestar físico y acceder a información científica actualizada en un solo lugar
+</p>
+
+# User Feature
+<p>
+- Registro Seguro: Formulario con validación visual y máscara de contraseña.
+- Interfaz Adaptable: Diseño responsivo que funciona en móviles y computadoras.
+- Sección de Noticias: Panel informativo sobre tendencias de salud y bienestar.
 </p>
 
 # Alcance
@@ -44,6 +51,7 @@ Vista previa de las interfaces principales del sistema Vitalis.
   <img src="imagenes/login.png" alt="login" width="360" style="margin: 10px;">
   <img src="imagenes/blog.png" alt="blog" width="400" style="margin: 10px;">
   <img src="imagenes/registrarse.png" alt="registro" width= "400" style="margin: 10px;">
+  <img src="imagenes/caphome.png" alt="home" width= "400" style="margin: 10px;">
 </p>
 
 ## 👤Colaboradores
