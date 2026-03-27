@@ -1,0 +1,140 @@
+:root{
+  --brand: #14b5d1;
+  --brand-dark: #0d9ab3;
+  --text-title: #5a5e64;
+  --text-input: #6a6a6a;
+  --text-placeholder: #b8b8b8;
+  --text-forgot: #a9a9a9;
+  --line: #cfcfcf;
+  
+  /* Agregamos las variables del panel de registro */
+  --panel: rgba(255,255,255,.68);
+  --shadow: 0 10px 30px rgba(0,0,0,.10);
+}
+
+*{ box-sizing: border-box; }
+html, body{ height: 100%; }
+body{ margin: 0; font-family: Arial, Helvetica, sans-serif; background: #ffffff; }
+
+.login{ min-height: 100vh; display: grid; grid-template-columns: 1.1fr 1.1fr; }
+
+/* 1. Fondo izquierdo con el degradado del registro */
+.login__left{ 
+  background: radial-gradient(1200px 700px at 20% 15%, rgba(255,255,255,.90), rgba(255,255,255,.55));
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 28px 34px; 
+}
+
+/* 2. El cuadro blanco transparente */
+.panel{ 
+  width: min(420px, 100%); 
+  padding: clamp(18px, 3.2vw, 36px);
+  border-radius: 28px;
+  background: var(--panel);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255,255,255,.55);
+}
+
+/* 3. Control libre del Logo (Igual que en registro) */
+.brand { 
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 80px; 
+  margin-bottom: 20px; 
+}
+
+.brand__logo { 
+  width: 450px; /* <--- MODIFICA ESTO PARA HACERLO MÁS GRANDE O CHICO */
+  height: auto; 
+  display: block; 
+  object-fit: contain; 
+  /* <--- MODIFICA ESTO PARA MOVERLO (Izquierda/Derecha, Arriba/Abajo) */
+  transform: translate(-90px, -5px); 
+  pointer-events: none; /* <--- Evita que el logo bloquee los clics */
+}
+
+h1{ margin: 0 0 25px; font-size: 60px; line-height: 0.95; font-weight: 700; letter-spacing: -0.04em; color: var(--text-title); }
+
+.form{ width: 100%; }
+.field{ display: block; margin-bottom: 16px; }
+
+/* Inputs ajustados al 100% del panel nuevo */
+.field input{
+  width: 100%;
+  height: 52px;
+  padding: 0 20px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  outline: none;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-input);
+}
+
+.field input::placeholder{ color: var(--text-placeholder); }
+
+.btn{
+  width: 100%;
+  height: 55px;
+  margin-top: 4px;
+  border: none;
+  border-radius: 999px;
+  background: var(--brand);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.btn:hover{ background: var(--brand-dark); }
+
+.forgot{ width: 100%; margin: 18px 0 0; text-align: center; }
+.forgot a{ text-decoration: none; color: var(--text-forgot); font-size: 14px; }
+
+.login__right{
+  min-height: 100vh;
+  background-image: url("../img/fondo-pagina.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 900px){
+  .login{ grid-template-columns: 1fr; }
+  .login__right{ min-height: 40vh; order: -1; }
+  .login__left{ padding: 24px 20px 40px; }
+  .panel{ width: 100%; }
+  .brand__logo{ transform: translate(0, 0); width: 200px; margin: 0 auto; }
+  h1{ font-size: 42px; margin-bottom: 24px; text-align: center;}
+  .field input, .btn, .forgot{ width: 100%; }
+}
+
+/* --- AGREGADOS PARA EL BOTÓN DEL OJO --- */
+.password-field {
+  position: relative;
+  width: 100%; 
+}
+
+.password-field input {
+  width: 100%; 
+  padding-right: 50px; 
+}
+
+.input__action {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--text-placeholder);
+  display: flex;
+}
+
+.input__action svg { fill: currentColor; }
+.input__action:hover { color: var(--brand); }

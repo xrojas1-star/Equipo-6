@@ -1,0 +1,122 @@
+:root {
+  --brand: #0aa6c5;
+  --brand-dark: #078aa3;
+  --text: #3e3e3e;
+  --bg-left: #f3f3f3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: var(--text);
+}
+
+.home {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+}
+
+/* LADO IZQUIERDO */
+
+.home__left {
+  background: var(--bg-left);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 30px;
+}
+
+.content {
+  width: min(520px, 100%);
+}
+
+/* CONTENEDOR DEL LOGO */
+.brand {
+  margin-bottom: 20px;
+  height: 120px; 
+  display: flex;
+  align-items: flex-start; 
+}
+
+.brand__logo {
+  width: 600px; 
+  height: auto;
+  display: block;
+  
+  /* --- COORDENADAS --- */
+  /* Estas coordenadas solo mueven el logo de vitalis*/
+  transform: translate(-155px, -240px); 
+}
+
+h1 {
+  margin: 0;
+  font-size: 60px;
+  line-height: 1.05;
+  font-weight: 700;
+  color: #000;
+}
+
+.subtitle {
+  margin: 26px 0 48px;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.btn {
+  width: 310px;
+  height: 62px;
+  border-radius: 999px;
+  background: #16b2cf;
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background: var(--brand-dark);
+}
+
+/* LADO DERECHO */
+
+.home__right {
+  background-image: url("../img/fondo-pagina-inicio.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:900px) {
+  .home {
+    grid-template-columns: 1fr;
+  }
+  .home__right {
+    min-height: 45vh;
+    order: -1;
+  }
+  h1 { font-size: 42px; }
+  .btn { width: 280px; height: 56px; font-size: 24px; }
+  .brand__logo { 
+    transform: translate(0, 0); 
+    margin: 0 auto;
+  }
+}
