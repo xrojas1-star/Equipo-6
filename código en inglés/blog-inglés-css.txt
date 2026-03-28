@@ -1,29 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background: #f4f6f9;
-}
-
-.container {
-    display: flex;
-}
-
-.sidebar {
-    width: 220px;
-    background: #fff;
-    padding: 20px;
-    height: 100vh;
-    border-right: 1px solid #ddd;
-}
-
-.logo {
-    margin-bottom: 30px;
-    color: #2bbbad;
 }
 
 .sidebar ul {
