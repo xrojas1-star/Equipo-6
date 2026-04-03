@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitalis - Panel de Administración</title>
+    <link rel="stylesheet" href="panel_de_administracion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="logo-container">
+            <img src="imagenes/logovitalis.png" alt="Logo Vitalis" class="vitalis-logo">
+        </div>
+
+        <ul class="nav-menu">
+            <li class="active"><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="#"><i class="fas fa-users"></i> Usuarios</a></li>
+            <li><a href="#"><i class="fas fa-file-alt"></i> Contenido</a></li>
+            <li><a href="#"><i class="fas fa-tags"></i> Categorías</a></li>
+            <li><a href="#"><i class="fas fa-comments"></i> Comentarios</a></li>
+            <li><a href="#"><i class="fas fa-chart-line"></i> Estadísticas</a></li>
+            <li class="settings">
+                <a href="#"><i class="fas fa-cog"></i> Configuración</a>
+                <i class="fas fa-chevron-down arrow-down"></i>
+            </li>
+        </ul>
+
+        <div class="user-profile">
+            <img src="https://via.placeholder.com/40" alt="Usuario" class="user-avatar">
+            <div class="user-info">
+                <span class="user-name">María López</span>
+                <span class="user-role">Admin</span>
+            </div>
+            <i class="fas fa-sign-out-alt logout-icon"></i>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        
+        <header class="top-header">
+            <div class="search-bar">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="Buscar...">
+            </div>
+            <div class="top-icons">
+                <i class="fas fa-bell notification-icon"></i>
+                <img src="https://via.placeholder.com/35" alt="Avatar" class="top-avatar">
+            </div>
+        </header>
+
+        <div class="section-title">
+            <h1>Administrador</h1>
+        </div>
+
+        <div class="stats-cards">
+            <div class="card card-users">
+                <div class="card-icon-bg"><i class="fas fa-user-friends"></i></div>
+                <div class="card-details">
+                    <span class="card-title">Total de Usuarios</span>
+                    <span class="card-number">120</span>
+                </div>
+            </div>
+            <div class="card card-posts">
+                <div class="card-icon-bg"><i class="fas fa-file-medical"></i></div>
+                <div class="card-details">
+                    <span class="card-title">Publicaciones</span>
+                    <span class="card-number green">350</span>
+                </div>
+            </div>
+            <div class="card card-comments">
+                <div class="card-icon-bg"><i class="fas fa-comment-dots"></i></div>
+                <div class="card-details">
+                    <span class="card-title">Comentarios</span>
+                    <span class="card-number">8</span>
+                </div>
+            </div>
+            <div class="card card-multimedia">
+                <div class="card-icon-bg"><i class="fas fa-camera-retro"></i></div>
+                <div class="card-details">
+                    <span class="card-title">Multimedia</span>
+                    <span class="card-number blue">560</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-container">
+            
+            <div class="user-management">
+                <div class="management-header">
+                    <h2>Gestión de Usuarios</h2>
+                    <div class="header-actions">
+                        <div class="search-users">
+                            <input type="text" placeholder="Buscar...">
+                        </div>
+                        <button class="add-user-btn"><i class="fas fa-plus"></i> Añadir Usuario</button>
+                    </div>
+                </div>
+
+                <table class="user-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre <i class="fas fa-sort-down"></i></th>
+                            <th>Correo electrónico <i class="fas fa-sort-down"></i></th>
+                            <th>Rol <i class="fas fa-sort-down"></i></th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><div class="avatar-cell m-cell">M</div> Maria</td>
+                            <td>maria.lopez@ejemplo.com</td>
+                            <td>Admin</td>
+                            <td><span class="status active">Activo</span></td>
+                            <td class="actions-cell">
+                                <i class="fas fa-pencil-alt edit"></i>
+                                <i class="fas fa-cog config"></i>
+                                <i class="fas fa-trash-alt delete"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="avatar-cell c-cell">C</div> Carlos</td>
+                            <td>carlos.herrera@ejemplo.com</td>
+                            <td>Editor</td>
+                            <td><span class="status active">Activo</span></td>
+                            <td class="actions-cell">
+                                <i class="fas fa-pencil-alt edit"></i>
+                                <i class="fas fa-cog config"></i>
+                                <i class="fas fa-trash-alt delete"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="avatar-cell l-cell">L</div> Laura</td>
+                            <td>laura.rodriguez@ejemplo.com</td>
+                            <td>Autor</td>
+                            <td><span class="status pending">Pendiente</span></td>
+                            <td class="actions-cell">
+                                <i class="fas fa-pencil-alt edit"></i>
+                                <i class="fas fa-cog config"></i>
+                                <i class="fas fa-trash-alt delete"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="avatar-cell p-cell">P</div> Pedro</td>
+                            <td>pedro.gomez@ejemplo.com</td>
+                            <td>Autor</td>
+                            <td><span class="status rejected">Rechazado</span></td>
+                            <td class="actions-cell">
+                                <i class="fas fa-pencil-alt edit"></i>
+                                <i class="fas fa-cog config"></i>
+                                <i class="fas fa-trash-alt delete"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="avatar-cell a-cell">A</div> Ana</td>
+                            <td>analucia_1@ejemplo.com</td>
+                            <td>Autor</td>
+                            <td><span class="status published">Publicado</span></td>
+                            <td class="actions-cell">
+                                <i class="fas fa-pencil-alt edit"></i>
+                                <i class="fas fa-cog config"></i>
+                                <i class="fas fa-trash-alt delete"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="pagination">
+                    <span><i class="fas fa-chevron-left"></i> 1-5</span>
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <span><i class="fas fa-chevron-right"></i></span>
+                </div>
+            </div>
+
+            <aside class="right-panels">
+                <div class="quick-admin">
+                    <h3>Administración Rápida</h3>
+                    <ul>
+                        <li><i class="fas fa-users-cog"></i> Admin General <i class="fas fa-chevron-right arrow-right"></i></li>
+                        <li><i class="fas fa-clipboard-check"></i> Auditoria <i class="fas fa-chevron-right arrow-right"></i></li>
+                        <li><i class="fas fa-tag"></i> Etiquetas <i class="fas fa-chevron-right arrow-right"></i></li>
+                        <li><i class="fas fa-hdd"></i> Copia de Seguridad <i class="fas fa-chevron-right arrow-right"></i></li>
+                        <li><i class="fas fa-cogs"></i> Configuración <i class="fas fa-chevron-right arrow-right"></i></li>
+                    </ul>
+                </div>
+                <div class="system-infra">
+                    <h3>Infraestructura del Sistema</h3>
+                </div>
+            </aside>
+        </div>
+
+    </main>
+
+</body>
+</html>

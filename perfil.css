@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #f0f7f9;
+    height: 100vh;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    width: 280px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e0e0e0;
+}
+
+.logo-container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.vitalis-logo {
+    height: 45px; /* Tamaño del logo como pediste */
+    width: auto;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 20px 15px;
+    flex-grow: 1;
+}
+
+.nav-menu li {
+    margin-bottom: 8px;
+}
+
+.nav-menu li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #444;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* El elemento de Inicio con el fondo celeste claro de la imagen */
+.nav-menu li.active a {
+    background-color: #e0f2f1;
+    color: #00897b;
+}
+
+.nav-menu li a i {
+    margin-right: 15px;
+    font-size: 20px;
+    width: 25px;
+    text-align: center;
+}
+
+/* Perfil inferior en sidebar */
+.user-profile-bottom {
+    padding: 20px;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    background-color: #f9fbfb;
+}
+
+.user-info {
+    flex-grow: 1;
+    margin-left: 12px;
+    overflow: hidden;
+}
+
+.user-name {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.user-email {
+    font-size: 11px;
+    color: #888;
+}
+
+/* --- CONTENIDO --- */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    background: #e0ecef;
+    padding: 10px 20px;
+    border-radius: 25px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    background: none;
+    border: none;
+    margin-left: 10px;
+    width: 100%;
+    outline: none;
+}
+
+/* --- CARD DE PERFIL --- */
+.profile-card-header {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.profile-info-main {
+    display: flex;
+    align-items: center;
+}
+
+.profile-photo-container {
+    position: relative;
+    margin-right: 25px;
+}
+
+.profile-photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #e0f2f1;
+}
+
+.online-status {
+    width: 18px;
+    height: 18px;
+    background: #4caf50;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.profile-text h1 {
+    font-size: 24px;
+}
+
+.profile-text h1 span {
+    font-size: 14px;
+    font-weight: normal;
+    color: #888;
+    margin-left: 10px;
+}
+
+.specialty {
+    color: #555;
+    margin: 5px 0 15px 0;
+}
+
+.stats-row {
+    font-size: 13px;
+    color: #666;
+    display: flex;
+    gap: 20px;
+}
+
+.level-tag {
+    color: #00897b;
+}
+
+.profile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-actions button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: left;
+    color: white;
+}
+
+.btn-edit { background: #26a69a; }
+.btn-planes { background: #00897b; }
+.btn-support { background: #00796b; }
+
+/* Dashboard inferior */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.status-tag {
+    float: right;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+.in-progress { background: #fff3e0; color: #ef6c00; }
+.completed { background: #e8f5e9; color: #2e7d32; }
+.pending { background: #f5f5f5; color: #777; }
