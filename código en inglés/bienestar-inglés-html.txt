@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitalis - Bienestar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="bienestaringlés.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h1 class="logo">VITALIS</h1>
+        
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#" class="menu-item">🏠 Login</a></li>
+                <li><a href="#" class="menu-item">🔍 Tips</a></li>
+                <li><a href="#" class="menu-item">💚 Health</a></li>
+                <li class="active"><a href="#" class="menu-item">❤️ Wellbeing</a></li>
+                <li><a href="#" class="menu-item">👤 My Profile</a></li>
+                <li><a href="#" class="menu-item">🔔 Notifications</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-profile-sidebar">
+            <div class="profile-container">
+                <img src="imagenes-inglés/sin foto.png" alt="Maria López" class="profile-img">
+            </div>
+            <div class="user-details">
+                <span class="user-name">Maria López</span>
+                <span class="user-email">maria.lopez@gmail.com</span>
+            </div>
+            <button class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header>
+            <h2 class="section-title">Your Wellbeing Dashboard</h2>
+            <p class="panel-subtitle">Your guide to a balanced life</p>
+        </header>
+
+        <div class="cards-container">
+            <div class="info-card">
+                <div class="card-header wellness-header">
+                    <h3>🧘 Wellbeing Holistic: The Art of Balance</h3>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li><span class="bullet-check">✔</span> Techniques for mind-body balance</li>
+                        <li><span class="bullet-check">✔</span> Daily self-care practices</li>
+                        <li><span class="bullet-check">✔</span> Nighttime rituals for good sleep</li>
+                    </ul>
+                    <button class="btn-primary">Explore Practices</button>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="card-header mental-header">
+                    <h3>🌿 Salud Mental & Resiliencia</h3>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li><span class="bullet-check">✔</span> Gratitude exercises</li>
+                        <li><span class="bullet-check">✔</span> Anxiety and stress management</li>
+                        <li><span class="bullet-check">✔</span> Building positive relationships</li>
+                    </ul>
+                    <button class="btn-primary">Learn More</button>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="card-header environment-header">
+                    <h3>🏠 Environment & Ambient Wellbeing</h3>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li><span class="bullet-check">✔</span> Organization for calm</li>
+                        <li><span class="bullet-check">✔</span> Ergonomics and micro-breaks</li>
+                        <li><span class="bullet-check">✔</span> Plants for air purification</li>
+                    </ul>
+                    <button class="btn-primary">Create Your Space</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-grid">
+            <div class="bottom-card">
+                <h3>💡 Micro-Steps to Wellbeing</h3>
+                <div class="step-item">
+                    <label><span>💧</span> 5 minutes of deep breathing</label>
+                    <input type="checkbox" checked>
+                </div>
+                <div class="step-item">
+                    <label><span>🚶</span> Take a walk in the sunlight</label>
+                    <input type="checkbox">
+                </div>
+            </div>
+
+            <div class="bottom-card">
+                <h3>🤝 Community</h3>
+                <textarea placeholder="Share your progress..."></textarea>
+                <button class="btn-send">Send</button>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

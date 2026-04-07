@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitalis - Bienestar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="bienestar.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h1 class="logo">VITALIS</h1>
+        
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#" class="menu-item">🏠 Inicio</a></li>
+                <li><a href="#" class="menu-item">🔍 Consejos</a></li>
+                <li><a href="#" class="menu-item">💚 Salud</a></li>
+                <li class="active"><a href="#" class="menu-item">❤️ Bienestar</a></li>
+                <li><a href="#" class="menu-item">👤 Mi Perfil</a></li>
+                <li><a href="#" class="menu-item">🔔 Notificaciones</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-profile-sidebar">
+            <div class="profile-container">
+                <img src="imagenes/sin foto.png" alt="Maria López" class="profile-img">
+            </div>
+            <div class="user-details">
+                <span class="user-name">Maria López</span>
+                <span class="user-email">maria.lopez@gmail.com</span>
+            </div>
+            <button class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header>
+            <h2 class="section-title">Tu Panel de Bienestar</h2>
+            <p class="panel-subtitle">Tu guía para una vida en equilibrio</p>
+        </header>
+
+        <div class="cards-container">
+            <div class="info-card">
+                <div class="card-header wellness-header">
+                    <h3>🧘 Bienestar Holístico: El Arte del Balance</h3>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li><span class="bullet-check">✔</span> Técnicas de equilibrio mente-cuerpo</li>
+                        <li><span class="bullet-check">✔</span> Prácticas de auto-cuidado diario</li>
+                        <li><span class="bullet-check">✔</span> Rituales de noche para un buen sueño</li>
+                    </ul>
+                    <button class="btn-primary">Explorar Prácticas</button>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="card-header mental-header">
+                    <h3>🌿 Salud Mental & Resiliencia</h3>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li><span class="bullet-check">✔</span> Ejercicios de gratitud</li>
+                        <li><span class="bullet-check">✔</span> Manejo de la ansiedad y estrés</li>
+                        <li><span class="bullet-check">✔</span> Construyendo relaciones positivas</li>
+                    </ul>
+                    <button class="btn-primary">Aprender Más</button>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="card-header environment-header">
+                    <h3>🏠 Entorno & Bienestar Ambiental</h3>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li><span class="bullet-check">✔</span> Organización para la calma</li>
+                        <li><span class="bullet-check">✔</span> Ergonomía y micro-descansos</li>
+                        <li><span class="bullet-check">✔</span> Plantas para purificar el aire</li>
+                    </ul>
+                    <button class="btn-primary">Crear tu Espacio</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-grid">
+            <div class="bottom-card">
+                <h3>💡 Micro-Pasos de Bienestar</h3>
+                <div class="step-item">
+                    <label><span>💧</span> 5 min de respiración profunda</label>
+                    <input type="checkbox" checked>
+                </div>
+                <div class="step-item">
+                    <label><span>🚶</span> Sal a la luz del día</label>
+                    <input type="checkbox">
+                </div>
+            </div>
+
+            <div class="bottom-card">
+                <h3>🤝 Comunidad</h3>
+                <textarea placeholder="Comparte tu progreso..."></textarea>
+                <button class="btn-send">Enviar</button>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
