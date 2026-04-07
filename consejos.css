@@ -97,7 +97,6 @@ body {
 
 .card-image h3 { color: white; position: relative; z-index: 1; font-size: 15px; margin: 0; }
 
-/* AQUÍ AGREGUÉ LAS DIRECCIONES DE TUS IMÁGENES */
 .nutrition { background-image: url("imagenes/frutas\ y\ verduras.png"); background-color: #2e7d32; }
 .mental { background-image: url("imagenes/meditación.png"); background-color: #1565c0; }
 .mobility { background-image: url("imagenes/movilidad\ activa.png"); background-color: #455a64; }
