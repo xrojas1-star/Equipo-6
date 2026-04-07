@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="blog.css">
     <meta charset="UTF-8">
     <title>Vitalis UI</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="blog.css">
+</head>     
 <body>
 
 <div class="container">
 
-</aside>
     <aside class="sidebar">
         <h2 class="logo">VITALIS</h2>
         <nav>
             <ul>
-                <li class="active">🏠 Inicio</li>
-                <li>🔍 Consejos</li>
-                <li>💚 Salud</li>
-                <li>❤️ Bienestar</li>
-                <li>👤 Mi Perfil</li>
-                <li>🔔 Notificaciones</li>
+                <li class="active"><a href="blog.html">🏠 Inicio</a></li>
+                <li><a href="consejos.html">🔍 Consejos</a></li>
+                <li><a href="salud.html">💚 Salud</a></li>
+                <li><a href="bienestar.html">❤️ Bienestar</a></li>
+                <li><a href="perfil.html">👤 Mi Perfil</a></li>
+                <li><a href="notificaciones.html">🔔 Notificaciones</a></li>
             </ul>
         </nav>
+
+        <div class="user-profile-sidebar">
+            <div class="profile-info">
+                <div class="profile-img-container">
+                    <img src="imagenes/sin foto.png" alt="Maria López">
+                </div>
+                <div class="user-data">
+                    <span class="user-name">Maria López</span>
+                    <span class="user-email">maria.lopez@gmail.com</span>
+                </div>
+            </div>
+            <button class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
     </aside>
 
-    <!-- Main -->
     <main class="main">
         <input type="text" placeholder="¿Qué estás buscando?" class="search">
 
@@ -51,7 +64,7 @@
         </div>
 
         <div class="post">
-            <h4>Felipe Angeles· 4h</h4>
+            <h4>Felipe Angeles · 4h</h4>
             <h3>Mindfulness: Guía para Principiantes</h3>
             <p>Aprende cómo iniciar en mindfulness.</p>
             <div class="tags">
@@ -59,10 +72,8 @@
                 <span>#Mindfulness</span>
             </div>
         </div>
-
     </main>
 
-    <!-- Right panel -->
     <aside class="right">
         <div class="card">
             <h3>Tendencias</h3>
