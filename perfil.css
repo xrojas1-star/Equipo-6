@@ -1,3 +1,4 @@
+/* --- ESTILOS GENERALES --- */
 * {
     margin: 0;
     padding: 0;
@@ -45,26 +46,24 @@ body {
     list-style: none;
 }
 
-/* Estilo base de los botones del menú */
 .nav-menu li a {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: #555;
     padding: 12px 20px;
-    border-radius: 15px; /* Bordes redondeados pedida */
+    border-radius: 15px; 
     font-weight: 500;
     margin-bottom: 8px;
-    transition: all 0.3s ease; /* Transición suave para el hover */
+    transition: all 0.3s ease;
 }
 
-/* --- EFECTO HOVER (Azul al acercar el mouse) --- */
+/* Efecto Hover Azul solicitado */
 .nav-menu li a:hover {
-    background-color: #e0f2f1; /* Color azul/verde clarito */
-    color: #00897b;           /* Texto en color de la marca */
+    background-color: #e0f2f1; 
+    color: #00897b;           
 }
 
-/* --- ESTADO ACTIVO (FIJO) --- */
 .nav-menu li.active a {
     background-color: #e0f2f1;
     color: #00897b;
@@ -78,7 +77,7 @@ body {
     text-align: center;
 }
 
-/* --- PERFIL INFERIOR SIDEBAR --- */
+/* Perfil inferior Sidebar */
 .user-profile-bottom {
     padding: 15px 20px;
     border-top: 1px solid #f0f0f0;
@@ -161,20 +160,26 @@ body {
     object-fit: cover;
 }
 
-/* --- CARDS Y OTROS --- */
+/* --- SECCIÓN PERFIL ACOMODADA --- */
 .profile-card-header {
     background: #ffffff;
     border-radius: 20px;
-    padding: 30px;
+    padding: 25px;
     display: flex;
     justify-content: space-between;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     margin-bottom: 30px;
 }
 
+.profile-info-main {
+    display: flex;
+    align-items: center;
+}
+
+/* Foto principal más pequeña */
 .profile-photo {
-    width: 100px;
-    height: 100px;
+    width: 80px; 
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #e0f2f1;
@@ -183,31 +188,38 @@ body {
 .profile-photo-container { position: relative; margin-right: 25px; }
 
 .online-status {
-    width: 15px;
-    height: 15px;
+    width: 14px;
+    height: 14px;
     background: #4caf50;
     border: 2px solid #fff;
     border-radius: 50%;
     position: absolute;
-    bottom: 5px;
-    right: 5px;
+    bottom: 3px;
+    right: 3px;
 }
+
+.profile-text h1 { font-size: 22px; margin-bottom: 4px; }
+.specialty { font-size: 13px; color: #666; margin-bottom: 10px; }
+
+.stats-row { display: flex; gap: 15px; font-size: 12px; color: #555; }
+.level-tag { background: #e0f2f1; color: #00897b; padding: 2px 8px; border-radius: 6px; }
 
 .profile-actions { display: flex; flex-direction: column; gap: 8px; }
 .profile-actions button {
     border: none;
-    padding: 10px 18px;
+    padding: 8px 15px;
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
     color: white;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .btn-edit { background: #26a69a; }
 .btn-planes { background: #00897b; }
 .btn-support { background: #00796b; }
 
+/* --- GRID DE DASHBOARD --- */
 .dashboard-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
 .grid-card {
@@ -217,14 +229,22 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.02);
 }
 
-.health-list { list-style: none; font-size: 13px; }
-.health-list li { margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; }
+.grid-card h3 { font-size: 15px; margin-bottom: 15px; color: #333; }
+
+/* Bloque Mis Planes Acomodado */
+.health-list { list-style: none; font-size: 12px; }
+.health-list li { 
+    margin-bottom: 10px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f9f9f9;
+}
+.health-list li:last-child { border-bottom: none; }
 .health-list i { color: #00897b; margin-right: 8px; }
 
-.team-member { display: flex; align-items: center; margin-bottom: 12px; font-size: 13px; }
-.mini-avatar { width: 32px; height: 32px; border-radius: 50%; margin-right: 12px; object-fit: cover; }
-
-.status-tag { font-size: 10px; padding: 3px 8px; border-radius: 10px; }
+.status-tag { font-size: 9px; padding: 2px 6px; border-radius: 8px; }
 .in-progress { background: #fff3e0; color: #ef6c00; }
 .completed { background: #e8f5e9; color: #2e7d32; }
 .pending { background: #f5f5f5; color: #777; }
@@ -237,5 +257,43 @@ body {
     color: #999;
     border: 1px dashed #ccc;
     border-radius: 10px;
-    font-size: 12px;
+    font-size: 11px;
 }
+
+/* Equipo de salud con imágenes pequeñas */
+.team-member { display: flex; align-items: center; margin-bottom: 12px; font-size: 12px; }
+.mini-avatar { width: 28px; height: 28px; border-radius: 50%; margin-right: 10px; object-fit: cover; }
+
+/* --- ESTILOS DEL MODAL DE SALIDA --- */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.modal-icon {
+    font-size: 30px;
+    color: #00897b;
+    margin: 0 auto 15px;
+}
+
+.modal-card h2 { font-size: 20px; color: #004d40; margin-bottom: 10px; }
+.modal-card p { font-size: 14px; color: #666; margin-bottom: 20px; }
+
+.modal-btns { display: flex; gap: 10px; justify-content: center; }
+.btn-confirmar { background: #00897b; color: white; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; font-weight: bold; }
+.btn-cancelar { background: #e0f2f1; color: #00897b; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; font-weight: bold; }

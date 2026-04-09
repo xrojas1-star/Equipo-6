@@ -1,7 +1,8 @@
 :root {
     --bg-main: #f4f7f6;
     --vitalis-green: #00796b;
-    --menu-hover-bg: #e0f2f1;
+    --menu-hover-bg: #e0f2f1; /* Hover azul claro */
+    --modal-green-dark: #004d40;
 }
 
 body {
@@ -35,6 +36,7 @@ body {
     transition: all 0.25s ease;
 }
 
+/* EFECTO HOVER AZUL SOLICITADO */
 .menu-item:hover, .active .menu-item {
     background-color: var(--menu-hover-bg);
     color: var(--vitalis-green);
@@ -139,3 +141,82 @@ body {
 
 .bottom-card { background: white; border-radius: 25px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); max-width: 450px; }
 .community-input input { width: 100%; padding: 15px; border-radius: 12px; border: 1px solid #eee; background: #fcfcfc; }
+
+/* --- ESTILOS DEL MODAL (ANUNCIO DE SALIDA) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none; /* Se activa con la función mostrarModal() */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.modal-header-icon {
+    width: 60px;
+    height: 60px;
+    border: 3px solid var(--modal-green-dark);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+.modal-card h2 {
+    color: var(--modal-green-dark);
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.modal-card p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-exit {
+    background-color: var(--modal-green-dark);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-cancel {
+    background-color: #e0f2f1;
+    color: var(--modal-green-dark);
+    border: 2px solid var(--modal-green-dark);
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-exit:hover { background-color: #002e26; }
+.btn-cancel:hover { background-color: #b2dfdb; }

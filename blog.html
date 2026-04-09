@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Vitalis UI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitalis - Inicio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="blog.css">
-</head>     
+</head>
 <body>
 
 <div class="container">
-
     <aside class="sidebar">
         <h2 class="logo">VITALIS</h2>
         <nav>
@@ -33,9 +33,9 @@
                     <span class="user-email">maria.lopez@gmail.com</span>
                 </div>
             </div>
-            <a href="inicio.html" class="logout-btn">
+            <button class="logout-btn" onclick="abrirModal()">
                 <i class="fas fa-sign-out-alt"></i>
-            </a>
+            </button>
         </div>
     </aside>
 
@@ -44,8 +44,8 @@
 
         <div class="post">
             <h4>Maria López · 3h</h4>
-            <h3>10 Superalimentos para Mejorar tu Salud</h3>
-            <p>Descubre cuáles son los superalimentos que pueden potenciar tu salud y bienestar.</p>
+            <h3>10 Superalimentos para mejorar tu salud</h3>
+            <p>Descubre qué superalimentos pueden mejorar tu salud y bienestar.</p>
             <div class="tags">
                 <span>#Nutrición</span>
                 <span>#Superalimentos</span>
@@ -54,45 +54,72 @@
 
         <div class="post">
             <h4>Andrea Cárdenas · 3h</h4>
-            <h3>5 Ejercicios para Fortalecer el Core</h3>
-            <p>Descubre una rutina efectiva para tonificar tu core.</p>
+            <h3>5 Ejercicios para Fortalecer tu Core</h3>
+            <p>Descubre una rutina efectiva para tonificar tu núcleo.</p>
             <div class="tags">
-                <span>#Ejercicio</span>
+                <span>#Ejercicios</span>
                 <span>#Core</span>
-                <span>#Superación</span>
+                <span>#Mejora</span>
             </div>
         </div>
 
         <div class="post">
             <h4>Felipe Angeles · 4h</h4>
-            <h3>Mindfulness: Guía para Principiantes</h3>
-            <p>Aprende cómo iniciar en mindfulness.</p>
+            <h3>Atención plena: Guía para principiantes</h3>
+            <p>Aprende cómo empezar con la atención plena.</p>
             <div class="tags">
                 <span>#Bienestar</span>
-                <span>#Mindfulness</span>
+                <span>#Consciencia</span>
             </div>
         </div>
     </main>
 
     <aside class="right">
         <div class="card">
-            <h3>Tendencias</h3>
+            <h3>tendencias</h3>
             <ul>
-                <li>🥗 Nutrición Saludable</li>
-                <li>🏋️ Ejercicio en Casa</li>
-                <li>🧘 Meditación</li>
-                <li>📋 Hábitos Saludables</li>
+                <li>🥗 Nutrición saludable</li>
+                <li>🏋️ Ejercicios en casa</li>
+                <li>🧘 Atención plena</li>
+                <li>📋 Hábitos saludables</li>
             </ul>
         </div>
 
         <div class="card">
-            <h3>A quién seguir</h3>
+            <h3>A quien seguir</h3>
             <p>Carlos Herrera</p>
             <p>Laura Díaz</p>
         </div>
     </aside>
-
 </div>
 
+<div id="logoutModal" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-icon">
+            <i class="fas fa-sign-out-alt"></i>
+        </div>
+        <h2>¿Deseas salir de la pestaña?</h2>
+        <p>Se perderán los progresos no guardados en tus rutinas de salud actuales.</p>
+        <div class="modal-buttons">
+            <button onclick="confirmarSalida()" class="btn-confirm">Sí, Salir</button>
+            <button onclick="cerrarModal()" class="btn-cancel">No, Cancelar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function abrirModal() {
+        document.getElementById('logoutModal').style.display = 'flex';
+    }
+
+    function cerrarModal() {
+        document.getElementById('logoutModal').style.display = 'none';
+    }
+
+    function confirmarSalida() {
+        window.location.href = "inicio.html";
+    }
+</script>
+
 </body>
-</html>
+</html> 

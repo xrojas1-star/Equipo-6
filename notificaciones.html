@@ -9,6 +9,20 @@
 </head>
 <body>
 
+    <div class="modal-overlay" id="modalSalida">
+        <div class="modal-card">
+            <div class="modal-icon">
+                <i class="fas fa-sign-out-alt"></i>
+            </div>
+            <h2>¿Deseas salir de la pestaña?</h2>
+            <p>Se perderán los progresos no guardados en tus rutinas de salud actuales.</p>
+            <div class="modal-btns">
+                <button class="btn-confirmar" onclick="confirmarSalida()">Sí, Salir</button>
+                <button class="btn-cancelar" onclick="cerrarModal()">No, Cancelar</button>
+            </div>
+        </div>
+    </div>
+
     <aside class="sidebar">
         <div class="logo-section">
             <h1 class="logo">VITALIS</h1>
@@ -33,9 +47,9 @@
                 <p class="name">Maria López</p>
                 <p class="email">maria.lopez@gmail.com</p>
             </div>
-            <a href="inicio.html" style="text-decoration: none; color: inherit;">
-                <i class="fas fa-sign-out-alt logout-icon"></i>
-            </a>
+            <div class="logout-icon" onclick="abrirModal()">
+                <i class="fas fa-sign-out-alt"></i>
+            </div>
         </div>
     </aside>
 
@@ -103,5 +117,20 @@
         </section>
     </main>
 
+    <script>
+        const modal = document.getElementById('modalSalida');
+
+        function abrirModal() {
+            modal.style.display = 'flex';
+        }
+
+        function cerrarModal() {
+            modal.style.display = 'none';
+        }
+
+        function confirmarSalida() {
+            window.location.href = "inicio.html";
+        }
+    </script>
 </body>
 </html>

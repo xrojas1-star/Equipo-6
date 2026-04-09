@@ -33,9 +33,9 @@
                 <span class="user-name">Maria López</span>
                 <span class="user-email">maria.lopez@gmail.com</span>
             </div>
-            <a href="inicio.html" style="text-decoration: none; color: inherit;">
-                <button class="logout-btn"><i class="fas fa-sign-out-alt"></i></button>
-            </a>
+            <button class="logout-btn" onclick="abrirAnuncio()">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
         </div>
     </aside>
 
@@ -105,5 +105,34 @@
             </div>
         </section>
     </main>
+
+    <div id="overlaySalida" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-icon">
+                <i class="fas fa-sign-out-alt"></i>
+            </div>
+            <h2>¿Deseas salir de la pestaña?</h2>
+            <p>Se perderán los progresos no guardados en tus rutinas de salud actuales.</p>
+            <div class="modal-btns">
+                <button class="btn-confirmar" onclick="confirmarSalida()">Sí, Salir</button>
+                <button class="btn-cancelar" onclick="cerrarAnuncio()">No, Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function abrirAnuncio() {
+            document.getElementById('overlaySalida').style.display = 'flex';
+        }
+
+        function cerrarAnuncio() {
+            document.getElementById('overlaySalida').style.display = 'none';
+        }
+
+        function confirmarSalida() {
+            window.location.href = "inicio.html";
+        }
+    </script>
+
 </body>
 </html>

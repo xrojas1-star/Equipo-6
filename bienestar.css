@@ -1,7 +1,8 @@
 :root {
     --bg-main: #f8fafb;
     --vitalis-green: #00796b;
-    --menu-active: #e0f2f1;
+    --menu-active: #e0f2f1; /* Hover azul claro */
+    --modal-green-dark: #004d40;
 }
 
 body {
@@ -45,6 +46,7 @@ body {
     transition: 0.3s;
 }
 
+/* EFECTO HOVER AZUL SOLICITADO */
 .menu-item:hover, .active .menu-item {
     background-color: var(--menu-active);
     color: var(--vitalis-green);
@@ -135,3 +137,82 @@ body {
 .step-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #f9f9f9; }
 .btn-send { background: var(--vitalis-green); color: white; border: none; padding: 8px 20px; border-radius: 8px; cursor: pointer; float: right; margin-top: 10px; }
 textarea { width: 100%; border: 1px solid #eee; border-radius: 10px; padding: 10px; resize: none; min-height: 80px; box-sizing: border-box; }
+
+/* --- ESTILOS DEL ANUNCIO DE SALIDA (MODAL) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none; /* Controlado por JS */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-anuncio {
+    background-color: white;
+    padding: 40px;
+    border-radius: 25px;
+    max-width: 480px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+.icon-header {
+    width: 65px;
+    height: 65px;
+    border: 3px solid var(--modal-green-dark);
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+.modal-anuncio h2 {
+    color: var(--modal-green-dark);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.modal-anuncio p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-si {
+    background-color: var(--modal-green-dark);
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-no {
+    background-color: #e0f2f1;
+    color: var(--modal-green-dark);
+    border: 2px solid var(--modal-green-dark);
+    padding: 15px 35px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-si:hover { background-color: #002e26; }
+.btn-no:hover { background-color: #b2dfdb; }
