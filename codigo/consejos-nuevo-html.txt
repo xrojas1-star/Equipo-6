@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vitalis - Consejos y Bienestar</title>
-    <link rel="stylesheet" href="consejosinglés.css">
+    <link rel="stylesheet" href="consejos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -16,18 +16,18 @@
         
         <nav class="nav-menu">
             <ul>
-                <li><a href="bloginglés.html">🏠 Login</a></li>
-                <li class="active"><a href="consejosinglés.html">🔍 Tips</a></li>
-                <li><a href="saludinglés.html">💚 Health</a></li>
-                <li><a href="bienestaringlés.html">❤️ Wellbeing</a></li>
-                <li><a href="perfilinglés.html">👤 My Profile</a></li>
-                <li><a href="notificacionesinglés.html">🔔 Notifications</a></li>
+                <li><a href="blog.html">🏠 Inicio</a></li>
+                <li class="active"><a href="consejos.html">🔍 Consejos</a></li>
+                <li><a href="salud.html">💚 Salud</a></li>
+                <li><a href="bienestar.html">❤️ Bienestar</a></li>
+                <li><a href="perfil.html">👤 Mi Perfil</a></li>
+                <li><a href="notificaciones.html">🔔 Notificaciones</a></li>
             </ul>
         </nav>
 
         <div class="user-footer">
             <div class="user-avatar">
-                <img src="imagenes-inglés/sin foto.png" alt="Usuario">
+                <img src="imagenes/sin foto.png" alt="Usuario">
             </div>
             <div class="user-details">
                 <p class="name">Maria López</p>
@@ -41,80 +41,80 @@
         <section class="main-panel">
             <div class="panel-header">
                 <div class="title-group">
-                    <h2 class="section-title">Tips and Wellbeing <span class="date-badge">15 Oct 2024</span></h2>
-                    <p class="subtitle">Your daily guide for a healthy life</p>
+                    <h2 class="section-title">Consejos y Bienestar <span class="date-badge">15 Oct 2024</span></h2>
+                    <p class="subtitle">Tu guía diaria para una vida saludable</p>
                 </div>
             </div>
 
             <div class="main-cards">
                 <div class="content-card">
                     <div class="card-image nutrition">
-                        <h3>Smart Nutrition: The Power of Superfoods</h3>
+                        <h3>Nutrición Inteligente: El Poder de los Superalimentos</h3>
                     </div>
                     <div class="card-body">
                         <ul>
-                            <li><i class="fas fa-check"></i> 5 Key Superfoods</li>
-                            <li><i class="fas fa-check"></i> Weekly Planning</li>
-                            <li><i class="fas fa-check"></i> Simple Recipes</li>
+                            <li><i class="fas fa-check"></i> 5 Superalimentos clave</li>
+                            <li><i class="fas fa-check"></i> Planificación semanal</li>
+                            <li><i class="fas fa-check"></i> Recetas sencillas</li>
                         </ul>
-                        <button class="btn-main">Read More</button>
+                        <button class="btn-main">Leer más</button>
                     </div>
                 </div>
 
                 <div class="content-card">
                     <div class="card-image mental">
-                        <h3>Mental Health: Micro-Breaks of Mindfulness</h3>
+                        <h3>Salud Mental: Micro-Pausas de Mindfulness</h3>
                     </div>
                     <div class="card-body">
                         <ul>
-                            <li><i class="fas fa-check"></i> 5-Minute Techniques</li>
-                            <li><i class="fas fa-check"></i> Visual Rules</li>
-                            <li><i class="fas fa-check"></i> Stress Management</li>
+                            <li><i class="fas fa-check"></i> Técnicas de 5 minutos</li>
+                            <li><i class="fas fa-check"></i> Reglas visual</li>
+                            <li><i class="fas fa-check"></i> Manejo del estrés</li>
                         </ul>
-                        <button class="btn-main">Watch Video</button>
+                        <button class="btn-main">Ver video</button>
                     </div>
                 </div>
 
                 <div class="content-card">
                     <div class="card-image mobility">
-                        <h3>Active Mobility: Improve Your Routine</h3>
+                        <h3>Movilidad Activa: Mejora tu Rutina</h3>
                     </div>
                     <div class="card-body">
                         <ul>
-                            <li><i class="fas fa-check"></i> Joint Mobility vs. Stretching</li>
-                            <li><i class="fas fa-check"></i> Pre-Yoga Warm-up</li>
-                            <li><i class="fas fa-check"></i> Office Exercises</li>
+                            <li><i class="fas fa-check"></i> Movilidad articular vs. Estiramiento</li>
+                            <li><i class="fas fa-check"></i> Calentamiento pre-Yoga</li>
+                            <li><i class="fas fa-check"></i> Ejercicios para oficina</li>
                         </ul>
-                        <button class="btn-main">Start Routine</button>
+                        <button class="btn-main">Empezar rutina</button>
                     </div>
                 </div>
             </div>
 
             <div class="bottom-grid">
                 <div class="quick-tips">
-                    <h3>💡 Quick Tips of the Day</h3>
+                    <h3>💡 Consejos Rápidos del Día</h3>
                     <div class="tip-item">
-                        <span>💧 Remember to drink water</span>
+                        <span>💧 Recuerda beber agua</span>
                         <input type="checkbox" checked>
                     </div>
                     <div class="tip-item">
-                        <span>🚶 Walk for 10 minutes after eating</span>
+                        <span>🚶 Camina 10 min tras comer</span>
                         <input type="checkbox">
                     </div>
                     <div class="tip-item">
-                        <span>🧠 Take a break from the screen</span>
+                        <span>🧠 Tómate un descanso de pantalla</span>
                         <input type="checkbox">
                     </div>
                 </div>
 
                 <div class="community-section">
-                    <h3>🤝 Community: Share Your Tips</h3>
+                    <h3>🤝 Comunidad: Comparte tus Consejos</h3>
                     <div class="comment-input">
-                        <input type="text" placeholder="Share a tip...">
+                        <input type="text" placeholder="Envía un consejo...">
                     </div>
                     <div class="community-action">
-                        <img src="imagenes-inglés/mujer.png" alt="Médico" class="mini-avatar">
-                        <span>See tips shared by the community</span>
+                        <img src="imagenes/mujer.png" alt="Médico" class="mini-avatar">
+                        <span>Ver consejos compartidos por la comunidad</span>
                     </div>
                 </div>
             </div>
@@ -126,11 +126,11 @@
             <div class="modal-icon">
                 <i class="fas fa-sign-out-alt"></i>
             </div>
-            <h2>Do you want to leave the tab?</h2>
-            <p>Your unsaved progress in your current health routines will be lost.</p>
+            <h2>¿Deseas salir de la pestaña?</h2>
+            <p>Se perderán los progresos no guardados en tus rutinas de salud actuales.</p>
             <div class="modal-buttons">
-                <button onclick="confirmarSalida()" class="btn-confirm">Yes, Exit</button>
-                <button onclick="cerrarModal()" class="btn-cancel">No, Cancel</button>
+                <button onclick="confirmarSalida()" class="btn-confirm">Sí, Salir</button>
+                <button onclick="cerrarModal()" class="btn-cancel">No, Cancelar</button>
             </div>
         </div>
     </div>
@@ -145,7 +145,7 @@
         }
 
         function confirmarSalida() {
-            window.location.href = "inicioinglés.html";
+            window.location.href = "inicio.html";
         }
     </script>
 

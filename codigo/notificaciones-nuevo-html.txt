@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vitalis - Notificaciones</title>
-    <link rel="stylesheet" href="notificacionesinglés.css">
+    <link rel="stylesheet" href="notificaciones.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -14,11 +14,11 @@
             <div class="modal-icon">
                 <i class="fas fa-sign-out-alt"></i>
             </div>
-            <h2>Do you want to leave the tab?</h2>
-            <p>Your unsaved progress in your current health routines will be lost.</p>
+            <h2>¿Deseas salir de la pestaña?</h2>
+            <p>Se perderán los progresos no guardados en tus rutinas de salud actuales.</p>
             <div class="modal-btns">
-                <button class="btn-confirmar" onclick="confirmarSalida()">Yes, Exit</button>
-                <button class="btn-cancelar" onclick="cerrarModal()">No, Cancel</button>
+                <button class="btn-confirmar" onclick="confirmarSalida()">Sí, Salir</button>
+                <button class="btn-cancelar" onclick="cerrarModal()">No, Cancelar</button>
             </div>
         </div>
     </div>
@@ -30,18 +30,18 @@
         
         <nav class="nav-menu">
             <ul>
-                <li><a href="bloginglés.html">🏠 Login</a></li>
-                <li><a href="consejosinglés.html">🔍 Tips</a></li>
-                <li><a href="saludinglés.html">💚 Health</a></li>
-                <li><a href="bienestaringlés.html">❤️ Wellbeing</a></li>
-                <li><a href="perfilinglés.html">👤 My Profile</a></li>
-                <li class="active"><a href="notificacionesinglés.html">🔔 Notifications</a></li>
+                <li><a href="blog.html">🏠 Inicio</a></li>
+                <li><a href="consejos.html">🔍 Consejos</a></li>
+                <li><a href="salud.html">💚 Salud</a></li>
+                <li><a href="bienestar.html">❤️ Bienestar</a></li>
+                <li><a href="perfil.html">👤 Mi Perfil</a></li>
+                <li class="active"><a href="notificaciones.html">🔔 Notificaciones</a></li>
             </ul>
         </nav>
 
         <div class="user-footer">
             <div class="user-avatar">
-                <img src="imagenes-inglés/sin foto.png" alt="Usuario">
+                <img src="imagenes/sin foto.png" alt="Usuario">
             </div>
             <div class="user-details">
                 <p class="name">Maria López</p>
@@ -55,22 +55,22 @@
 
     <main class="content-area">
         <section class="main-panel">
-            <h2 class="section-title">Notification Panel: Maria Lopez</h2>
+            <h2 class="section-title">Panel de Notificaciones: Maria López</h2>
 
             <div class="priority-alerts">
-                <p class="subtitle">Priority Health Alerts</p>
+                <p class="subtitle">Alertas de Salud Prioritarias</p>
                 <div class="cards-container">
                     <div class="card water">
                         <i class="fas fa-bottle-water"></i>
-                        <p><strong>Hydration Alert:</strong> It's time to drink water! (11:00)</p>
+                        <p><strong>Alerta de Hidratación:</strong> ¡Es hora de beber agua! (11:00)</p>
                     </div>
                     <div class="card keto">
                         <i class="fas fa-utensils"></i>
-                        <p><strong>Keto Nutrition Plan:</strong> Reminder for your dinner.</p>
+                        <p><strong>Plan de Nutrición Keto:</strong> Recordatorio para tu cena.</p>
                     </div>
                     <div class="card stats">
                         <i class="fas fa-chart-line"></i>
-                        <p><strong>Monthly Evaluation:</strong> Your report is ready.</p>
+                        <p><strong>Evaluación Mensual:</strong> Tu informe está listo.</p>
                     </div>
                 </div>
             </div>
@@ -79,39 +79,39 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>Type of Notification</th>
-                            <th>Details</th>
-                            <th>Date/Time</th>
-                            <th>Status</th>
-                            <th>Actions</th>
+                            <th>Tipo de Notificación</th>
+                            <th>Detalles</th>
+                            <th>Fecha/Hora</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>⏰ Daily Reminder</td>
-                            <td>Yoga Routine Morning: You're about to start!</td>
-                            <td>15 minutes ago</td>
-                            <td><span class="status unread">Not Read</span></td>
+                            <td>⏰ Recordatorio Diario</td>
+                            <td>Rutina Yoga Mañana: ¡A punto de empezar!</td>
+                            <td>hace 15 min</td>
+                            <td><span class="status unread">No Leída</span></td>
                             <td><button class="action-btn">...</button></td>
                         </tr>
                         <tr>
-                            <td>💚 Health</td>
-                            <td>Wellbeing Evaluation: New results</td>
-                            <td>2 hours ago</td>
-                            <td><span class="status urgent">Not Read (Urgent)</span></td>
+                            <td>💚 Salud</td>
+                            <td>Evaluación de Bienestar Corporal: Nuevos resultados</td>
+                            <td>hace 2 horas</td>
+                            <td><span class="status urgent">No Leída (Urgente)</span></td>
                             <td><button class="action-btn">...</button></td>
                         </tr>
                         <tr class="read-row">
-                            <td>📈 Progression</td>
-                            <td>Keto Nutrition Plan: Week 4 completed.</td>
-                            <td>1 day ago</td>
-                            <td><span class="status read">Read</span></td>
+                            <td>📈 Progresión</td>
+                            <td>Plan de Nutrición Keto: Semana 4 completada.</td>
+                            <td>hace 22 horas</td>
+                            <td><span class="status read">Leída</span></td>
                             <td><button class="action-btn">...</button></td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="pagination">
-                    <i class="fas fa-chevron-left"></i> 24 Apr 2024 <i class="fas fa-chevron-right"></i>
+                    <i class="fas fa-chevron-left"></i> 24 abr 2024 <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
         </section>
@@ -129,7 +129,7 @@
         }
 
         function confirmarSalida() {
-            window.location.href = "inicioinglés.html";
+            window.location.href = "inicio.html";
         }
     </script>
 </body>
