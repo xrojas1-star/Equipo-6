@@ -31,11 +31,9 @@
                 <span class="user-name">Maria López</span>
                 <span class="user-email">maria.lopez@gmail.com</span>
             </div>
-            <a href="inicio.html" style="text-decoration: none;">
-                <button class="logout-btn">
-                    <i class="fas fa-sign-out-alt"></i>
-                </button>
-            </a>
+            <button class="logout-btn" onclick="abrirAnuncio()">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
         </div>
     </aside>
 
@@ -109,6 +107,38 @@
             </div>
         </div>
     </main>
+
+    <div id="overlaySalida" class="modal-overlay">
+        <div class="modal-anuncio">
+            <div class="icon-header">
+                <svg viewBox="0 0 24 24" width="35" height="35" fill="none" stroke="#004d40" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                    <polyline points="10 17 15 12 10 7"></polyline>
+                    <line x1="15" y1="12" x2="3" y2="12"></line>
+                </svg>
+            </div>
+            <h2>¿Deseas salir de la pestaña?</h2>
+            <p>Se perderán los progresos no guardados en tus rutinas de salud actuales.</p>
+            <div class="modal-buttons">
+                <button class="btn-si" onclick="redigirInicio()">Sí, Salir</button>
+                <button class="btn-no" onclick="cerrarAnuncio()">No, Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function abrirAnuncio() {
+            document.getElementById('overlaySalida').style.display = 'flex';
+        }
+
+        function cerrarAnuncio() {
+            document.getElementById('overlaySalida').style.display = 'none';
+        }
+
+        function redigirInicio() {
+            window.location.href = "inicio.html";
+        }
+    </script>
 
 </body>
 </html>

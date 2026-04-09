@@ -3,6 +3,7 @@
     --vitalis-teal: #00796b;
     --active-blue: #e0f2f1; 
     --text-color: #333;
+    --modal-dark: #1a534e; /* Verde oscuro para el modal */
 }
 
 body {
@@ -27,6 +28,13 @@ body {
 
 .nav-menu ul { list-style: none; padding: 0 15px; }
 
+.nav-menu li { border-radius: 10px; transition: 0.3s; }
+
+/* HOVER AZUL EN EL MENÚ */
+.nav-menu li:hover {
+    background-color: var(--active-blue);
+}
+
 .nav-menu a {
     text-decoration: none;
     color: #555;
@@ -38,8 +46,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.nav-menu a:hover {
-    background-color: var(--active-blue);
+.nav-menu li:hover a {
     color: var(--vitalis-teal);
 }
 
@@ -61,7 +68,8 @@ body {
 .user-avatar img { width: 100%; height: 100%; object-fit: cover; }
 .user-details .name { font-size: 14px; font-weight: bold; margin: 0; }
 .user-details .email { font-size: 11px; color: #888; margin: 0; }
-.logout-icon { margin-left: auto; color: var(--vitalis-teal); cursor: pointer; }
+.logout-icon { margin-left: auto; color: var(--vitalis-teal); cursor: pointer; transition: 0.3s; }
+.logout-icon:hover { color: var(--modal-dark); }
 
 .content-area { flex-grow: 1; padding: 40px; overflow-y: auto; }
 .main-panel { background: white; border-radius: 20px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
@@ -123,3 +131,57 @@ body {
 
 .mini-avatar { width: 25px; height: 25px; border-radius: 50%; margin-right: 10px; }
 .community-action { display: flex; align-items: center; margin-top: 15px; font-size: 13px; color: var(--vitalis-teal); cursor: pointer; }
+
+/* --- ESTILOS DEL MODAL (ANUNCIO DE SALIDA) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none; /* Controlado por JS */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 420px;
+    width: 90%;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.modal-icon {
+    font-size: 30px;
+    color: var(--modal-dark);
+    border: 2px solid var(--modal-dark);
+    width: 60px; height: 60px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 12px;
+    margin: 0 auto 20px;
+}
+
+.modal-content h2 { color: var(--modal-dark); margin-bottom: 10px; font-size: 20px; }
+.modal-content p { color: #666; font-size: 14px; margin-bottom: 25px; line-height: 1.4; }
+
+.modal-buttons { display: flex; gap: 12px; justify-content: center; }
+
+.btn-confirm {
+    background: var(--modal-dark);
+    color: white; border: none;
+    padding: 12px 25px; border-radius: 10px;
+    font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+
+.btn-cancel {
+    background: var(--active-blue);
+    color: var(--modal-dark); border: 1.5px solid var(--modal-dark);
+    padding: 12px 25px; border-radius: 10px;
+    font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+
+.btn-confirm:hover { background: #0e3633; }
+.btn-cancel:hover { background: #b2dfdb; }
