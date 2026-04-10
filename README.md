@@ -16,7 +16,7 @@ La pltaforma busca brindar información clara, confiable y accesible sobre hábi
 
 # Objetivo Del Proyecto
 <p>
-- Desarrollar una página web que contribuya a la difusión del ODS3, promoviendo estilos de vida saludables y el cuidado integral de la salud.
+Desarrollar una página web que contribuya a la difusión del ODS3, promoviendo estilos de vida saludables y el cuidado integral de la salud.
 </p>
 
 # Propuesta De Valor
@@ -26,9 +26,9 @@ Vitalis nace para centralizar la gestión de salud preventiva, permitiendo a los
 
 # Característica de usuario
 <p>
-- Registro Seguro: Formulario con validación visual y máscara de contraseña.
-- Interfaz Adaptable: Diseño responsivo que funciona en móviles y computadoras.
-- Sección de Noticias: Panel informativo sobre tendencias de salud y bienestar.
+* Registro Seguro: Formulario con validación visual y máscara de contraseña.
+* Interfaz Adaptable: Diseño responsivo que funciona en móviles y computadoras.
+* Sección de Noticias: Panel informativo sobre tendencias de salud y bienestar.
 </p>
 
 # Segmentos y clientes
