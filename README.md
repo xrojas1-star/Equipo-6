@@ -26,10 +26,11 @@ Vitalis nace para centralizar la gestión de salud preventiva, permitiendo a los
 
 # Característica de usuario
 <p>
+
 - Registro Seguro: Formulario con validación visual y máscara de contraseña.
   
 - Interfaz Adaptable: Diseño responsivo que funciona en móviles y computadoras.
-- 
+  
 - Sección de Noticias: Panel informativo sobre tendencias de salud y bienestar.
 </p>
 
