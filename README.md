@@ -31,8 +31,8 @@ Vitalis nace para centralizar la gestión de salud preventiva, permitiendo a los
 - Sección de Noticias: Panel informativo sobre tendencias de salud y bienestar.
 </p>
 
-# Alcance
-**Vitalis** está dirigido a estudiantes y al público en general.  El sistema contempla secciones informativas, recursos vitales y el uso de una base de datos para el almacenamiento y gestión de contenidos.
+# Segmentos y clientes
+**Vitalis** Esta plataforma está dirigida a estudiantes y jóvenes, comunidades educativas, organizaciones de salud y empresas.
 </p>
 # Tecnologías utilizadas
 <ul>
