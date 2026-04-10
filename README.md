@@ -14,10 +14,18 @@
 La pltaforma busca brindar información clara, confiable y accesible sobre hábitos saludables, prevención de enfermedades y bienestar integral, apoyando la concientización de los usuarios mediante contenidos digitales.
 </p>
 
-# Objetivo Del Proyecto
+## 📖 Objetivos generales
 <p>
-Desarrollar una página web que contribuya a la difusión del ODS3, promoviendo estilos de vida saludables y el cuidado integral de la salud.
+Evaluar el impacto del uso de una página web educativa sobre la ODS 3 (Salud y bienestar) en el nivel de conocimientos y en las actitudes relacionadas con la alimentación saludable, la actividad física, la prevención de enfermedades y el cuidado de la salud mental, en estudiantes de nivel escolar de la institución donde se desarrollará el proyecto, durante el periodo de implementación de la página web como recurso de apoyo al proceso de enseñanza y aprendizaje.
 </p>
+
+## 📋 Objetivos específicos
+**Identificar** información confiable sobre la ODS 3 (Salud y bienestar) para su integración en la página web, mediante una metodología de análisis documental.
+**Diseñar** la estructura y organización de los contenidos de la página web educativa sobre la ODS 3, mediante una metodología de análisis de requerimientos y planificación.
+**Desarrollar** un prototipo funcional de la página web educativa sobre la ODS 3, mediante una metodología de trabajo en laboratorio en entorno de desarrollo.
+**Evaluar** la usabilidad y comprensión de la página web por parte de los estudiantes, mediante una metodología de campo basada en pruebas con usuarios.
+**Analizar** el nivel de conocimientos de los estudiantes sobre salud y bienestar antes y después del uso de la página web, mediante una metodología de análisis de datos.
+
 
 # Propuesta De Valor
 <p>
