@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitalis - My Profile</title>
+    <link rel="stylesheet" href="perfilinglés.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo-container">
+            <h2 class="logo">VITALIS</h2>
+        </div>
+        
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="bloginglés.html">🏠 Home</a></li>
+                <li><a href="consejosinglés.html">🔍 Tips</a></li>
+                <li><a href="saludinglés.html">💚 Health</a></li>
+                <li><a href="bienestaringlés.html">❤️ Wellbeing</a></li>
+                <li class="active"><a href="perfilinglés.html">👤 My Profile</a></li>
+                <li><a href="notificacionesinglés.html">🔔 Notifications</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-profile-bottom">
+            <div class="avatar-container">
+                <img src="imagenes-inglés/sin foto.png" alt="Maria López" class="profile-img-small">
+            </div>
+            <div class="user-info">
+                <span class="user-name">Maria López</span>
+                <span class="user-email">maria.lopez@gmail.com</span>
+            </div>
+            <button class="logout-btn" onclick="abrirAnuncio()">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="top-header">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buscar...">
+            </div>
+            <div class="top-actions">
+                <i class="fas fa-bell" style="color: #666; cursor: pointer; margin-right: 15px;"></i>
+                <img src="imagenes-inglés/perfil-sin-foto.png" class="avatar-top" alt="User">
+            </div>
+        </header>
+
+        <section class="profile-section">
+            <div class="profile-card-header">
+                <div class="profile-info-main">
+                    <div class="profile-photo-container">
+                        <img src="imagenes-inglés/perfil-sin-foto.png" alt="Maria López" class="profile-photo">
+                        <div class="online-status"></div>
+                    </div>
+                    <div class="profile-text">
+                        <h1>Maria López</h1>
+                        <p class="specialty">Specialist in Nutrition and Body Wellness</p>
+                        <div class="stats-row">
+                            <span>Member since: <strong>January 2024</strong></span>
+                            <span>Programs: <strong>8</strong></span>
+                            <span>Points: <strong>1250</strong></span>
+                            <span>Level: <strong class="level-tag">Advanced</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <button class="btn-edit"><i class="fas fa-pencil-alt"></i> Edit Profile</button>
+                    <button class="btn-planes"><i class="fas fa-folder"></i> View My Plans</button>
+                    <button class="btn-support"><i class="fas fa-envelope"></i> Contact Support</button>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="grid-card">
+                    <h3>My Current Health Plans</h3>
+                    <ul class="health-list">
+                        <li><span><i class="fas fa-check-square"></i> Keto Nutrition Plan</span> <span class="status-tag in-progress">In Progress</span></li>
+                        <li><span><i class="fas fa-check-square"></i> Morning Yoga Routine</span> <span class="status-tag completed">Completed</span></li>
+                        <li><span><i class="fas fa-square"></i> Mindfulness</span> <span class="status-tag pending">Pending</span></li>
+                    </ul>
+                </div>
+                <div class="grid-card">
+                    <h3>My Achievements and Progress</h3>
+                    <div class="chart-placeholder">
+                        <i class="fas fa-chart-line"></i> Body Fat Reduction
+                    </div>
+                </div>
+                <div class="grid-card">
+                    <h3>My Health Team</h3>
+                    <div class="team-member">
+                        <img src="imagenes-inglés/hombre.png" class="mini-avatar" alt="Dr">
+                        <span>Dr. Benitez - Diabetólogo</span>
+                    </div>
+                    <div class="team-member">
+                        <img src="imagenes-inglés/mujer.png" class="mini-avatar" alt="Dra">
+                        <span>Dra. Garcia - Psychologist</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="overlaySalida" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-icon">
+                <i class="fas fa-sign-out-alt"></i>
+            </div>
+            <h2>Do you want to leave the tab?</h2>
+            <p>Your unsaved progress in your current health routines will be lost.</p>
+            <div class="modal-btns">
+                <button class="btn-confirmar" onclick="confirmarSalida()">Yes, Exit</button>
+                <button class="btn-cancelar" onclick="cerrarAnuncio()">No, Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function abrirAnuncio() {
+            document.getElementById('overlaySalida').style.display = 'flex';
+        }
+
+        function cerrarAnuncio() {
+            document.getElementById('overlaySalida').style.display = 'none';
+        }
+
+        function confirmarSalida() {
+            window.location.href = "inicioinglés.html";
+        }
+    </script>
+
+</body>
+</html>

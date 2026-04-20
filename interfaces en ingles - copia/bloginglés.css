@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background: #fff;
+    padding: 20px;
+    height: 100vh;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column; 
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    margin-bottom: 30px;
+    color: #2bbbad;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 5px;
+    border-radius: 10px;
+    transition: 0.3s; 
+}
+
+.sidebar li:hover {
+    background: #e6f7f5;
+}
+
+.sidebar li a {
+    text-decoration: none;
+    color: #555;
+    display: block;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.sidebar li.active {
+    background: #e6f7f5;
+}
+
+.sidebar li.active a {
+    color: #2bbbad;
+    font-weight: bold;
+}
+
+.user-profile-sidebar {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img-container {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+    background: #eee;
+}
+
+.profile-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name { font-size: 13px; font-weight: bold; color: #333; }
+.user-email { font-size: 11px; color: #888; }
+
+.logout-btn {
+    background: none;
+    border: 2px solid #2bbbad;
+    border-radius: 50%;
+    color: #2bbbad;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #2bbbad;
+    color: white;
+}
+
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+.search {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    margin-bottom: 25px;
+    outline: none;
+}
+
+.post {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.post h4 { color: #666; font-size: 14px; margin-bottom: 8px; }
+.post h3 { margin-bottom: 10px; color: #222; }
+.post p { color: #555; line-height: 1.5; margin-bottom: 15px; }
+
+.tags span {
+    background: #e6f7f5;
+    color: #2bbbad;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin-right: 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.right { width: 300px; padding: 20px; }
+.card { background: #fff; padding: 20px; border-radius: 12px; margin-bottom: 20px; }
+.card h3 { font-size: 16px; margin-bottom: 15px; color: #333; }
+.card ul { list-style: none; }
+.card li { margin-bottom: 12px; font-size: 14px; color: #444; }
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.modal-icon {
+    font-size: 30px;
+    color: #1a534e;
+    border: 2px solid #1a534e;
+    width: 60px; height: 60px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 12px;
+    margin: 0 auto 20px;
+}
+
+.modal-content h2 { color: #1a534e; margin-bottom: 10px; font-size: 20px; }
+.modal-content p { color: #666; font-size: 14px; margin-bottom: 25px; }
+
+.modal-buttons { display: flex; gap: 10px; justify-content: center; }
+
+.btn-confirm {
+    background: #1a534e;
+    color: white; border: none;
+    padding: 12px 20px; border-radius: 10px;
+    font-weight: bold; cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-cancel {
+    background: #e6f7f5;
+    color: #1a534e; border: 1px solid #1a534e;
+    padding: 12px 20px; border-radius: 10px;
+    font-weight: bold; cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-confirm:hover { background: #0e3633; }
+.btn-cancel:hover { background: #d1efec; }

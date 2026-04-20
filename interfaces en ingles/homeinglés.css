@@ -3,6 +3,7 @@
     --text-dark: #333;
     --text-light: #666;
     --bg-light: #f4f7f9;
+    --footer-bg: #0a2d37;
 }
 
 * {
@@ -53,6 +54,7 @@ nav ul li a.active {
     text-decoration: none;
     font-size: 14px;
 }
+
 .hero {
     height: 450px;
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('imagenes-inglés/fondo-pagina.png');
@@ -183,4 +185,97 @@ nav ul li a.active {
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
+}
+
+.main-footer {
+    background-color: var(--footer-bg);
+    color: #f1f1f1;
+    padding: 60px 5% 20px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.footer-logo {
+    height: 50px;
+    margin-bottom: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary);
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00acee; 
+}
+
+.btn-ods {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+}
+
+.footer-bottom p {
+    margin-bottom: 5px;
 }

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitalis - Inicio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="bloginglés.css">
+</head>
+<body>
+
+<div class="container">
+    <aside class="sidebar">
+        <h2 class="logo">VITALIS</h2>
+        <nav>
+            <ul>
+                <li class="active"><a href="bloginglés.html">🏠 Login</a></li>
+                <li><a href="consejosinglés.html">🔍 Tips</a></li>
+                <li><a href="saludinglés.html">💚 Health</a></li>
+                <li><a href="bienestaringlés.html">❤️ Wellbeing</a></li>
+                <li><a href="perfilinglés.html">👤 My Profile</a></li>
+                <li><a href="notificacionesinglés.html">🔔 Notifications</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-profile-sidebar">
+            <div class="profile-info">
+                <div class="profile-img-container">
+                    <img src="imagenes-inglés/sin foto.png" alt="Maria López">
+                </div>
+                <div class="user-data">
+                    <span class="user-name">Maria López</span>
+                    <span class="user-email">maria.lopez@gmail.com</span>
+                </div>
+            </div>
+            <button class="logout-btn" onclick="abrirModal()">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </aside>
+
+    <main class="main">
+        <input type="text" placeholder="What are you looking for?" class="search">
+
+        <div class="post">
+            <h4>Maria López · 3h</h4>
+            <h3>10 Superfoods to improve your health</h3>
+            <p>Discover which superfoods can improve your health and wellbeing.</p>
+            <div class="tags">
+                <span>#Nutrition</span>
+                <span>#Superfoods</span>
+            </div>
+        </div>
+
+        <div class="post">
+            <h4>Andrea Cárdenas · 3h</h4>
+            <h3>5 Exercises to Strengthen your Core</h3>
+            <p>Discover an effective routine to tone your core.</p>
+            <div class="tags">
+                <span>#Exercises</span>
+                <span>#Core</span>
+                <span>#Improve</span>
+            </div>
+        </div>
+
+        <div class="post">
+            <h4>Felipe Angeles · 4h</h4>
+            <h3>Mindfulness: A Beginner's Guide</h3>
+            <p>Learn how to start with mindfulness.</p>
+            <div class="tags">
+                <span>#Wellbeing</span>
+                <span>#Consciousness</span>
+            </div>
+        </div>
+    </main>
+
+    <aside class="right">
+        <div class="card">
+            <h3>tendencies</h3>
+            <ul>
+                <li>🥗 Healthy nutrition</li>
+                <li>🏋️ Home exercises</li>
+                <li>🧘 Mindfulness</li>
+                <li>📋 Healthy habits</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>People to Follow</h3>
+            <p>Carlos Herrera</p>
+            <p>Laura Díaz</p>
+        </div>
+    </aside>
+</div>
+
+<div id="logoutModal" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-icon">
+            <i class="fas fa-sign-out-alt"></i>
+        </div>
+        <h2>Do you want to log out?</h2>
+        <p>Your unsaved progress in your current health routines will be lost.</p>
+        <div class="modal-buttons">
+            <button onclick="confirmarSalida()" class="btn-confirm">Yes, Log Out</button>
+            <button onclick="cerrarModal()" class="btn-cancel">No, Cancel</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function abrirModal() {
+        document.getElementById('logoutModal').style.display = 'flex';
+    }
+
+    function cerrarModal() {
+        document.getElementById('logoutModal').style.display = 'none';
+    }
+
+    function confirmarSalida() {
+        window.location.href = "inicioinglés.html";
+    }
+</script>
+
+</body>
+</html> 

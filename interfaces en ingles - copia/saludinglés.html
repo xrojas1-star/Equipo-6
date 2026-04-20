@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitalis - Panel de Salud</title>
+    <link rel="stylesheet" href="saludinglés.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h1 class="logo">VITALIS</h1>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="bloginglés.html" class="menu-item"><span class="emoji">🏠</span> Login</a></li>
+                <li><a href="consejosinglés.html" class="menu-item"><span class="emoji">🔍</span> Tips</a></li>
+                <li class="active"><a href="saludinglés.html" class="menu-item"><span class="emoji">💚</span> Health</a></li>
+                <li><a href="bienestaringlés.html" class="menu-item"><span class="emoji">❤️</span> Wellbeing</a></li>
+                <li><a href="perfilinglés.html" class="menu-item"><span class="emoji">👤</span> My Profile</a></li>
+                <li><a href="notificacionesinglés.html" class="menu-item"><span class="emoji">🔔</span> Notifications</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-profile-footer">
+            <div class="user-avatar-container">
+                <img src="imagenes-inglés/sin foto.png" alt="Maria López" class="profile-img">
+            </div>
+            <div class="user-details">
+                <span class="user-name">Maria López</span>
+                <span class="user-email">maria.lopez@gmail.com</span>
+            </div>
+            
+            <button class="logout-btn" onclick="mostrarModal()">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#00796b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+            </button>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <section class="health-panel">
+            <div class="panel-header-main">
+                <h2 class="section-title">Your Health Panel</h2>
+                <p class="panel-subtitle">Comprehensive tracking of your health metrics and medical appointments</p>
+            </div>
+
+            <div class="cards-container">
+                <div class="info-card">
+                    <div class="card-header metrics-header">
+                        <h3>❤️ My Health Metrics</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li><span class="emoji checked">✔️</span> Last Check-up: Sept 2024</li>
+                            <li><span class="emoji checked">✔️</span> 30-day Trends</li>
+                            <li><span class="emoji checked">✔️</span> View Complete Details</li>
+                        </ul>
+                        <button class="btn-primary">View Details</button>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-header appointments-header">
+                        <h3>📅 Medical Appointment History</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li><span class="emoji checked">✔️</span> Appointment: Dr. Ruiz (Gastro)</li>
+                            <li><span class="emoji checked">✔️</span> Test Results: Available</li>
+                            <li><span class="emoji checked">✔️</span> Schedule New Appointment</li>
+                        </ul>
+                        <button class="btn-primary">View History</button>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-header medication-header">
+                        <h3>💊 Medication Reminders</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li><span class="emoji checked">✔️</span> Vitamin D Supplement: 9am</li>
+                            <li><span class="emoji checked">✔️</span> Magnesium: 8pm</li>
+                            <li><span class="emoji checked">✔️</span> Next Prescription Renewal</li>
+                        </ul>
+                        <button class="btn-primary">Manage Medication</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-sections">
+                <div class="bottom-card">
+                    <h3>🤝 Community</h3>
+                    <div class="community-input">
+                        <input type="text" placeholder="Send a tip...">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="logoutModal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header-icon">
+                <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#004d40" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                    <polyline points="10 17 15 12 10 7"></polyline>
+                    <line x1="15" y1="12" x2="3" y2="12"></line>
+                </svg>
+            </div>
+            <h2>Do you want to exit the tab?</h2>
+            <p>Any unsaved progress in your current health routines will be lost.</p>
+            <div class="modal-actions">
+                <button class="btn-exit" onclick="confirmarSalida()">Yes, Exit</button>
+                <button class="btn-cancel" onclick="ocultarModal()">No, Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function mostrarModal() {
+            document.getElementById('logoutModal').style.display = 'flex';
+        }
+
+        function ocultarModal() {
+            document.getElementById('logoutModal').style.display = 'none';
+        }
+
+        function confirmarSalida() {
+            window.location.href = "inicioinglés.html";
+        }
+    </script>
+</body>
+</html>

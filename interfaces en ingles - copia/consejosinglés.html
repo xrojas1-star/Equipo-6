@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitalis - Consejos y Bienestar</title>
+    <link rel="stylesheet" href="consejosinglés.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo-section">
+            <h1 class="logo">VITALIS</h1>
+        </div>
+        
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="bloginglés.html">🏠 Login</a></li>
+                <li class="active"><a href="consejosinglés.html">🔍 Tips</a></li>
+                <li><a href="saludinglés.html">💚 Health</a></li>
+                <li><a href="bienestaringlés.html">❤️ Wellbeing</a></li>
+                <li><a href="perfilinglés.html">👤 My Profile</a></li>
+                <li><a href="notificacionesinglés.html">🔔 Notifications</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-footer">
+            <div class="user-avatar">
+                <img src="imagenes-inglés/sin foto.png" alt="Usuario">
+            </div>
+            <div class="user-details">
+                <p class="name">Maria López</p>
+                <p class="email">maria.lopez@gmail.com</p>
+            </div>
+            <i class="fas fa-sign-out-alt logout-icon" onclick="abrirModal()"></i>
+        </div>
+    </aside>
+
+    <main class="content-area">
+        <section class="main-panel">
+            <div class="panel-header">
+                <div class="title-group">
+                    <h2 class="section-title">Tips and Wellbeing <span class="date-badge">15 Oct 2024</span></h2>
+                    <p class="subtitle">Your daily guide for a healthy life</p>
+                </div>
+            </div>
+
+            <div class="main-cards">
+                <div class="content-card">
+                    <div class="card-image nutrition">
+                        <h3>Smart Nutrition: The Power of Superfoods</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 5 Key Superfoods</li>
+                            <li><i class="fas fa-check"></i> Weekly Planning</li>
+                            <li><i class="fas fa-check"></i> Simple Recipes</li>
+                        </ul>
+                        <button class="btn-main">Read More</button>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <div class="card-image mental">
+                        <h3>Mental Health: Micro-Breaks of Mindfulness</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 5-Minute Techniques</li>
+                            <li><i class="fas fa-check"></i> Visual Rules</li>
+                            <li><i class="fas fa-check"></i> Stress Management</li>
+                        </ul>
+                        <button class="btn-main">Watch Video</button>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <div class="card-image mobility">
+                        <h3>Active Mobility: Improve Your Routine</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Joint Mobility vs. Stretching</li>
+                            <li><i class="fas fa-check"></i> Pre-Yoga Warm-up</li>
+                            <li><i class="fas fa-check"></i> Office Exercises</li>
+                        </ul>
+                        <button class="btn-main">Start Routine</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-grid">
+                <div class="quick-tips">
+                    <h3>💡 Quick Tips of the Day</h3>
+                    <div class="tip-item">
+                        <span>💧 Remember to drink water</span>
+                        <input type="checkbox" checked>
+                    </div>
+                    <div class="tip-item">
+                        <span>🚶 Walk for 10 minutes after eating</span>
+                        <input type="checkbox">
+                    </div>
+                    <div class="tip-item">
+                        <span>🧠 Take a break from the screen</span>
+                        <input type="checkbox">
+                    </div>
+                </div>
+
+                <div class="community-section">
+                    <h3>🤝 Community: Share Your Tips</h3>
+                    <div class="comment-input">
+                        <input type="text" placeholder="Share a tip...">
+                    </div>
+                    <div class="community-action">
+                        <img src="imagenes-inglés/mujer.png" alt="Médico" class="mini-avatar">
+                        <span>See tips shared by the community</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="logoutModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-sign-out-alt"></i>
+            </div>
+            <h2>Do you want to leave the tab?</h2>
+            <p>Your unsaved progress in your current health routines will be lost.</p>
+            <div class="modal-buttons">
+                <button onclick="confirmarSalida()" class="btn-confirm">Yes, Exit</button>
+                <button onclick="cerrarModal()" class="btn-cancel">No, Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function abrirModal() {
+            document.getElementById('logoutModal').style.display = 'flex';
+        }
+
+        function cerrarModal() {
+            document.getElementById('logoutModal').style.display = 'none';
+        }
+
+        function confirmarSalida() {
+            window.location.href = "inicioinglés.html";
+        }
+    </script>
+
+</body>
+</html>
