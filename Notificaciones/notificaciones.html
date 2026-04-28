@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitalis - Notificaciones</title>
+    <link rel="stylesheet" href="notificaciones.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo-section">
+            <h1 class="logo">VITALIS</h1>
+        </div>
+        
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#">🏠 Inicio</a></li>
+                <li><a href="#">🔍 Consejos</a></li>
+                <li><a href="#">💚 Salud</a></li>
+                <li><a href="#">❤️ Bienestar</a></li>
+                <li><a href="#">👤 Mi Perfil</a></li>
+                <li class="active"><a href="#">🔔 Notificaciones</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-footer">
+            <div class="user-avatar">
+                <img src="imagenes/sin foto.png" alt="Usuario">
+            </div>
+            <div class="user-details">
+                <p class="name">Maria López</p>
+                <p class="email">maria.lopez@gmail.com</p>
+            </div>
+            <i class="fas fa-sign-out-alt logout-icon"></i>
+        </div>
+    </aside>
+
+    <main class="content-area">
+        <section class="main-panel">
+            <h2 class="section-title">Panel de Notificaciones: Maria López</h2>
+
+            <div class="priority-alerts">
+                <p class="subtitle">Alertas de Salud Prioritarias</p>
+                <div class="cards-container">
+                    <div class="card water">
+                        <i class="fas fa-bottle-water"></i>
+                        <p><strong>Alerta de Hidratación:</strong> ¡Es hora de beber agua! (11:00)</p>
+                    </div>
+                    <div class="card keto">
+                        <i class="fas fa-utensils"></i>
+                        <p><strong>Plan de Nutrición Keto:</strong> Recordatorio para tu cena.</p>
+                    </div>
+                    <div class="card stats">
+                        <i class="fas fa-chart-line"></i>
+                        <p><strong>Evaluación Mensual:</strong> Tu informe está listo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notifications-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo de Notificación</th>
+                            <th>Detalles</th>
+                            <th>Fecha/Hora</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>⏰ Recordatorio Diario</td>
+                            <td>Rutina Yoga Mañana: ¡A punto de empezar!</td>
+                            <td>hace 15 min</td>
+                            <td><span class="status unread">No Leída</span></td>
+                            <td><button class="action-btn">...</button></td>
+                        </tr>
+                        <tr>
+                            <td>💚 Salud</td>
+                            <td>Evaluación de Bienestar Corporal: Nuevos resultados</td>
+                            <td>hace 2 horas</td>
+                            <td><span class="status urgent">No Leída (Urgente)</span></td>
+                            <td><button class="action-btn">...</button></td>
+                        </tr>
+                        <tr class="read-row">
+                            <td>📈 Progresión</td>
+                            <td>Plan de Nutrición Keto: Semana 4 completada.</td>
+                            <td>hace 22 horas</td>
+                            <td><span class="status read">Leída</span></td>
+                            <td><button class="action-btn">...</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <i class="fas fa-chevron-left"></i> 24 abr 2024 <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

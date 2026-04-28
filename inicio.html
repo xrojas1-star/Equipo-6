@@ -7,23 +7,20 @@
   <link rel="stylesheet" href="inicio.css" />
 </head>
 <body>
-  <main class="home">
-    <!-- Lado izquierdo -->
-    <section class="home__left">
-      <div class="content">
-        <header class="brand">
-          <img class="brand__logo" src="img/logovitalis.png" alt="Vitalis" />
+
+  <main class="login"> 
+    
+    <section class="login__left">
+      <div class="panel">
+        <header class="brand">  
+          <img class="brand__logo" src="imagenes/logovitalis.png.png" alt="Vitalis" />
         </header>
 
         <h1>
           Sistema de<br>
-          
           Gestión de<br>
-          
           Salud y<br>
-          
-          Bienestar<br>
-        
+          Bienestar
         </h1>
 
         <p class="subtitle">
@@ -33,13 +30,19 @@
 
         <div class="actions">
           <a href="login.html" class="btn">Ingresar</a>
-          <a href="#" class="btn">Visitar</a>
+          <a href="#" class="btn btn--secondary">Visitar</a>
+          
+          <div class="darkmode-wrapper">
+            <input type="checkbox" id="darkmode-toggle"/>
+            <label for="darkmode-toggle"></label>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Lado derecho -->
-    <section class="home__right" aria-hidden="true"></section>
+    <section class="login__right" aria-hidden="true"></section>
+    
   </main>
+
 </body>
 </html>
