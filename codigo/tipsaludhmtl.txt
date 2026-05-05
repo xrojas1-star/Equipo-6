@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consejos de Bienestar</title>
+    <link rel="stylesheet" href="tipsalud.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="header">
+            <h1>¡MEJORA TU VIDA HOY! DESCUBRE NUESTROS CONSEJOS DIARIOS DE BIENESTAR</h1>
+        </header>
+
+        <section class="grid-tips">
+            <article class="card">
+                <div class="card-header">TIP DE SALUD DEL DÍA</div>
+                <div class="card-content">
+                    <div class="text">
+                        <h2>HIDRÁTATE CORRECTAMENTE:</h2>
+                        <p>BEBE SUFICIENTE AGUA DURANTE EL DÍA (2-3 LITROS)</p>
+                        <p class="footer-text">💡 Ayuda a tu cuerpo a funcionar mejor, mejora tu energía y digestión.</p>
+                    </div>
+                    <div class="icon">💧</div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-header">13 de Marzo, 2014</div>
+                <div class="card-content">
+                    <div class="text">
+                        <h2>TIP 2: LA IMPORTANCIA DEL SUEÑO</h2>
+                        <p class="footer-text">😴 Dormir lo suficiente es esencial para tu salud física y mental, mejora tu memoria y fortalece tu sistema inmunológico.</p>
+                    </div>
+                    <div class="icon">🌙</div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-header">12 de Diciembre, 2022</div>
+                <div class="card-content">
+                    <div class="text">
+                        <h2>TIP 3: ALIMENTACIÓN EQUILIBRADA</h2>
+                        <p class="footer-text">🥗 Ayuda a tu cuerpo a funcionar mejor, mejora tu energía y digestión.</p>
+                    </div>
+                    <div class="icon">🍎</div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-header">05 de Mayo, 2025</div>
+                <div class="card-content">
+                    <div class="text">
+                        <h2>TIP 4: EJERCICIO REGULAR</h2>
+                        <p class="footer-text">🏃‍♀️ El ejercicio regular mejora tu salud cardiovascular, fortalece tus músculos y aumenta tu energía.</p>
+                    </div>
+                    <div class="icon">💪</div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-header">12 de Octubre, 2023</div>
+                <div class="card-content">
+                    <div class="text">
+                        <h2>TIP 5: MEDITACIÓN</h2>
+                        <p class="footer-text">🧘 La meditación puede reducir el estrés, mejorar la concentración y promover un bienestar general.</p>
+                    </div>
+                    <div class="icon">🧘</div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-header">22 de Enero, 2020</div>
+                <div class="card-content">
+                    <div class="text">
+                        <h2>TIP 6: HIGIENE PERSONAL</h2>
+                        <p class="footer-text">🧼 Mantén una buena higiene para prevenir enfermedades y sentirte mejor.</p>
+                    </div>
+                    <div class="icon">🚰</div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>
