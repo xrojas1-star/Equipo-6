@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Bienestar Integral</title>
+    <link rel="stylesheet" href="bien.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <header class="main-header">
+            <h1>✨ TU PANEL DE BIENESTAR INTEGRAL ✨</h1>
+        </header>
+
+        <div class="dashboard-grid">
+            <section class="card border-green">
+                <header class="card-header bg-green">
+                    <span class="icon">🏃‍♂️</span> <h2>Salud Física</h2>
+                </header>
+                <div class="card-body">
+                    <div class="card-text">
+                        <p>Movimiento diario y ejercicio para vitalidad.</p>
+                    </div>
+                    <div class="card-image">🧘‍♀️</div>
+                </div>
+            </section>
+
+            <section class="card border-green-light">
+                <header class="card-header bg-green-light">
+                    <span class="icon">🥗</span> <h2>Nutrición Consciente</h2>
+                </header>
+                <div class="card-body">
+                    <div class="card-text">
+                        <p>Alimentos reales y equilibrados.</p>
+                    </div>
+                    <div class="card-image">🍎</div>
+                </div>
+            </section>
+
+            <section class="card border-green-bright">
+                <header class="card-header bg-green-bright">
+                    <span class="icon">🧘</span> <h2>Salud Mental</h2>
+                </header>
+                <div class="card-body">
+                    <div class="card-text">
+                        <p>Espacio para calma y enfoque.</p>
+                    </div>
+                    <div class="card-image">✨</div>
+                </div>
+            </section>
+
+            <section class="card border-teal">
+                <header class="card-header bg-teal">
+                    <span class="icon">🌙</span> <h2>Descanso y Sueño</h2>
+                </header>
+                <div class="card-body">
+                    <div class="card-text">
+                        <p>Optimización de recuperación.</p>
+                    </div>
+                    <div class="card-image">😴</div>
+                </div>
+            </section>
+
+            <section class="card border-blue">
+                <header class="card-header bg-blue">
+                    <span class="icon">💧</span> <h2>Hidratación</h2>
+                </header>
+                <div class="card-body">
+                    <div class="card-text">
+                        <p>Seguimiento de agua diaria.</p>
+                    </div>
+                    <div class="card-image">🥤</div>
+                </div>
+            </section>
+
+            <section class="card border-yellow">
+                <header class="card-header bg-yellow">
+                    <span class="icon">😊</span> <h2>Equilibrio Emocional</h2>
+                </header>
+                <div class="card-body">
+                    <div class="card-text">
+                        <p>Gestión de estrés y bienestar.</p>
+                    </div>
+                    <div class="card-image">🧡</div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>
