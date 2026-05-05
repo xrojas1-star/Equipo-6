@@ -6,6 +6,72 @@
     <title>Vitalis | Blog de Salud</title>
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none; 
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            background: #ffffff;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            position: relative;
+            max-height: 85vh;
+            overflow-y: auto;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .modal-header h2 {
+            color: #147a96;
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f4f7f9;
+            padding-bottom: 10px;
+        }
+
+        .modal-body {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .modal-body p { margin-bottom: 12px; }
+
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .btn-aceptar-modal {
+            background: #147a96;
+            color: #ffffff;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-aceptar-modal:hover {
+            background: #0d5e74;
+        }
+    </style>
 </head>
 <body>
 
@@ -38,7 +104,7 @@
             <p>Descubre todas las tendencias que tenemos para ti</p>
         </div>
 
-        <div class="articles-grid">
+        <div class="articles-grid" id="articlesGrid">
             <article class="card">
                 <div class="card-image">
                     <img src="imagenes/plato-de-comida.png" alt="Nutrición">
@@ -74,10 +140,50 @@
                     <span class="date">24 abril, 2024</span>
                 </div>
             </article>
+
+            <article class="card extra-content" style="display: none;">
+                <div class="card-image">
+                    <img src="imagenes/aguacate.png" alt="Nutrición">
+                    <span class="badge badge-nutricion">Nutrición</span>
+                </div>
+                <div class="card-body">
+                    <h3>Receta de Tostada de Aguacate Perfecta</h3>
+                    <p>Pan integral, huevo, especias</p>
+                    <p> Energía sostenible</p>
+                    <button class="btn-card-action">Descargar Receta</button>
+                </div>
+            </article>
+
+            <article class="card extra-content" style="display: none;">
+                <div class="card-image">
+                    <img src="imagenes/taichi.png" alt="Moverse">
+                    <span class="badge badge-ejercicio">Moverse</span>
+                </div>
+                <div class="card-body">
+                    <h3> Introducción al Tai Chi para Todos</h3>
+                    <p> Historia, beneficios, posturas</p>
+                    <p> Conexión mente-cuerpo</p>
+                    <button class="btn-card-action">Ver video</button>
+                </div>
+            </article>
+
+            <article class="card extra-content" style="display: none;">
+                <div class="card-image">
+                    <img src="imagenes/descanso.png" alt="Bienestar">
+                    <span class="badge badge-bienestar">Bienestar</span>
+                </div>
+                <div class="card-body">
+                    <h3> El Arte del Descanso y la Recuperación</h3>
+                    <p>  Importancia del sueño, 'Slow Living'</p>
+                    <p>  Técnicas de relajación</p>
+                    <button class="btn-card-action">Empezar rutina</button>
+                </div>
+            </article>
         </div>
 
         <div class="view-more">
-            <a href="#" class="btn-secondary">Ver más artículos</a>
+            <button id="btn-show-more" class="btn-secondary">Ver más artículos</button>
+            <button id="btn-show-less" class="btn-secondary" style="display: none;">Mostrar menos</button>
         </div>
     </main>
 
@@ -85,47 +191,147 @@
         <div class="footer-container">
             <div class="footer-section info">
                 <img src="imagenes/logovitalis.png" alt="Vitalis Logo" class="footer-logo">
-                <p>Vitalis contribuye al <strong>Objetivo de Desarrollo Sostenible 3: Salud y Bienestar</strong>, promoviendo hábitos saludables y acceso a información de calidad para todos.</p>
+                <p>Promoviendo un estilo de vida saludable alineado con el <strong>ODS 3</strong> de las Naciones Unidas. Salud y bienestar para todos.</p>
                 <div class="social-icons">
-                    <a href="https://www.tiktok.com/@vitalis_salud1?_r=1&_t=ZS-95hLVTxBBn5" target="_blank"><i class="fab fa-tiktok"></i></a>
-                    
-                    <a href="https://www.instagram.com/vitalis_salud.1?igsh=bmlpampza2hteHcx&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@vitalis_salud1?_r=1&_t=ZS-95hLVTxBBn5" title="Tiktok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/vitalis_salud.1?igsh=bmlpampza2hteHcx&utm_source=qr" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-x-twitter"></i></a>
                 </div>
             </div>
 
-            <div class="footer-section">
-                <h3>EXPLORAR</h3>
+            <div class="footer-section links">
+                <h3>Explorar</h3>
                 <ul>
                     <li><a href="login.html">Inicio</a></li>
-                    <li><a href="consejos.html">Consejos</a></li>
-                    <li><a href="salud.html">Salud</a></li>
-                    <li><a href="bienestar.html">Bienestar</a></li>
-                    <li><a href="perfil.html">Mi Perfil</a></li>
-                    <li><a href="notificaciones.html">Notificaciones</a></li>
+                    <li><a href="blog.html">Nuestro Blog</a></li>
+                    <li><a href="tipsalud.html">Tips de Salud</a></li>
+                    <li><a href="wellbeinginglés.html">Bienestar</a></li>
                 </ul>
             </div>
 
-            <div class="footer-section">
-                <h3>COMUNIDAD</h3>
+            <div class="footer-section links">
+                <h3>Comunidad</h3>
                 <ul>
-                    <li><a href="inicio.html">Únete</a></li>
-                    <li><a href="login.html">Iniciar sesión</a></li>
-                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="perfil.html">Mi Perfil</a></li>
+                    <li><a href="#" id="openPrivacidad">Privacidad</a></li>
+                    <li><a href="#" id="openTerminos">Términos de uso</a></li>
+                    <li><a href="#" id="openContacto">Contacto</a></li>
                 </ul>
             </div>
 
-            <div class="footer-section">
-                <h3>ODS 3</h3>
-                <p>HYDRON contribuye activamente a mejorar la salud global mediante la tecnología y la educación preventiva.</p>
-                <a href="#" class="btn-ods">Vida Saludable</a>
+            <div class="footer-section ods">
+                <h3>Nuestro Compromiso</h3>
+                <p>Trabajamos para facilitar el acceso a información preventiva de calidad.</p>
+                <div class="ods-tag">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>Objetivo ODS 3</span>
+                </div>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 VITALIS - Todos los derechos reservados</p>
-            <p>Hecho con <i class="fas fa-heart" style="color: #147a96;"></i> para el bienestar</p>
+            <p>&copy; 2026 <strong>VITALIS</strong>. Todos los derechos reservados.</p>
+            <p>Hecho con <i class="fas fa-heart"></i> para un mundo más sano.</p>
         </div>
     </footer>
+
+    <div id="modalTerminos" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Términos y Condiciones de Uso: VITALIS</h2>
+            </div>
+            <div class="modal-body">
+                <p><strong>VITALIS Términos y Condiciones de Uso</strong></p>
+                <p><strong>IMPORTANTE:</strong> Vitalis es una plataforma de carácter informativo y educativo. NO proporciona diagnósticos médicos, tratamientos ni consejos profesionales.</p>
+                <p><strong>Uso Permitido:</strong> El usuario se compromete a utilizar la página de manera ética y legal. Queda prohibido intentar vulnerar la seguridad del sitio.</p>
+                <p><strong>Propiedad Intelectual:</strong> Todo el diseño, logotipos y código fuente son propiedad de VITALIS.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="btnAceptarTerminos" class="btn-aceptar-modal">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalContacto" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Contacto</h2>
+            </div>
+            <div class="modal-body">
+                <p>¿Tienes alguna duda o sugerencia? ¡Estamos para escucharte!</p>
+                <p>Puedes ponerte en contacto con nosotros a través de nuestro correo oficial:</p>
+                <p style="text-align: center; font-size: 18px; color: #147a96; font-weight: bold; margin: 20px 0;">
+                    saludybienestarvitalis@gmail.com
+                </p>
+                <p>Te responderemos lo más pronto posible.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="btnCerrarContacto" class="btn-aceptar-modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalPrivacidad" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Política de Privacidad</h2>
+            </div>
+            <div class="modal-body">
+                <p>En <strong>VITALIS</strong>, tu privacidad es nuestra prioridad. Nos comprometemos a proteger los datos personales que compartas con nosotros.</p>
+                <p><strong>Recopilación de datos:</strong> Solo recolectamos información básica para mejorar tu experiencia en nuestro blog.</p>
+                <p><strong>Seguridad:</strong> Implementamos medidas de seguridad para proteger tu información contra accesos no autorizados.</p>
+                <p>Al navegar en nuestro sitio, aceptas nuestras prácticas de manejo de información descritas aquí.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="btnAceptarPrivacidad" class="btn-aceptar-modal">Aceptar términos</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Lógica de "Ver más"
+        const btnMore = document.getElementById('btn-show-more');
+        const btnLess = document.getElementById('btn-show-less');
+        const extras = document.querySelectorAll('.extra-content');
+
+        btnMore.addEventListener('click', function() {
+            extras.forEach(card => card.style.display = 'block');
+            btnMore.style.display = 'none';
+            btnLess.style.display = 'inline-block';
+        });
+
+        btnLess.addEventListener('click', function() {
+            extras.forEach(card => card.style.display = 'none');
+            btnLess.style.display = 'none';
+            btnMore.style.display = 'inline-block';
+            document.querySelector('.section-title').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // LÓGICA DE LOS MODALES
+        const modalTerminos = document.getElementById('modalTerminos');
+        const modalContacto = document.getElementById('modalContacto');
+        const modalPrivacidad = document.getElementById('modalPrivacidad');
+        
+        const openTerminos = document.getElementById('openTerminos');
+        const openContacto = document.getElementById('openContacto');
+        const openPrivacidad = document.getElementById('openPrivacidad');
+        
+        const closeTerminos = document.getElementById('btnAceptarTerminos');
+        const closeContacto = document.getElementById('btnCerrarContacto');
+        const closePrivacidad = document.getElementById('btnAceptarPrivacidad');
+
+        // Abrir/Cerrar Términos
+        openTerminos.addEventListener('click', function(e) { e.preventDefault(); modalTerminos.style.display = 'flex'; });
+        closeTerminos.addEventListener('click', function() { modalTerminos.style.display = 'none'; });
+
+        // Abrir/Cerrar Contacto
+        openContacto.addEventListener('click', function(e) { e.preventDefault(); modalContacto.style.display = 'flex'; });
+        closeContacto.addEventListener('click', function() { modalContacto.style.display = 'none'; });
+
+        // Abrir/Cerrar Privacidad
+        openPrivacidad.addEventListener('click', function(e) { e.preventDefault(); modalPrivacidad.style.display = 'flex'; });
+        closePrivacidad.addEventListener('click', function() { modalPrivacidad.style.display = 'none'; });
+    </script>
 
 </body>
 </html>
