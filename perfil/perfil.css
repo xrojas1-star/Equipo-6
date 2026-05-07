@@ -1,0 +1,318 @@
+/* --- Confi de variables y modo oscuro agregado     --- */
+:root {
+    --bg-pantalla: #f4f6f9;
+    --bg-sidebar: #ffffff;
+    --bg-card: #ffffff;
+    --texto-p: #333333;
+    --texto-s: #666666;
+    --bordes: #e0e0e0;
+    --search-bg: #e0ecef;
+    --logo-color: #00897b;
+    --shadow: rgba(0, 0, 0, 0.05);
+    --toggle-bg: #333333;
+}
+
+body.dark-mode {
+    --bg-pantalla: #000000;
+    --bg-sidebar: #121212;
+    --bg-card: #1a1a1a;
+    --texto-p: #ffffff;
+    --texto-s: #b0b0b0;
+    --bordes: #333333;
+    --search-bg: #2a2a2a;
+    --logo-color: #26a69a;
+    --shadow: rgba(0, 0, 0, 0.5);
+    --toggle-bg: #444444;
+}
+
+/* --- ESTILOS GENERALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: var(--bg-pantalla);
+    color: var(--texto-p);
+    height: 100vh;
+    overflow: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- SWITCH DE MODO OSCURO (FLOTANTE) --- */
+.dark-toggle-container {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 1000;
+}
+
+#modo-oscuro-check {
+    display: none;
+}
+
+.switch-label {
+    width: 60px;
+    height: 30px;
+    background-color: var(--toggle-bg);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    border: 1px solid var(--bordes);
+}
+
+.ball {
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    left: 4px;
+    transition: 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#modo-oscuro-check:checked + .switch-label .ball {
+    transform: translateX(30px);
+    background-color: #f1c40f;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    width: 280px;
+    background-color: var(--bg-sidebar);
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--bordes);
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+}q
+
+.logo-container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.logo {
+    color: var(--logo-color);
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    flex-grow: 1;
+    padding: 10px 15px;
+}
+
+.nav-menu ul {
+    list-style: none;
+}
+
+.nav-menu li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--texto-p);
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+
+.nav-menu li.active a {
+    background-color: #e0f2f1;
+    color: #00897b;
+}
+
+.user-profile-bottom {
+    padding: 15px 20px;
+    border-top: 1px solid var(--bordes);
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-sidebar);
+}
+
+.profile-img-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    flex-grow: 1;
+    margin-left: 12px;
+    overflow: hidden;
+}
+
+.user-name {
+    display: block;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--texto-p);
+}
+
+.user-email {
+    font-size: 10px;
+    color: var(--texto-s);
+}
+
+.logout-btn {
+    background: none;
+    border: none;
+    color: #00897b;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* --- CONTENIDO PRINCIPAL Y HEADER --- */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    background: var(--search-bg);
+    padding: 10px 20px;
+    border-radius: 25px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    background: none;
+    border: none;
+    margin-left: 10px;
+    width: 100%;
+    outline: none;
+    color: var(--texto-p);
+}
+
+.avatar-top {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+/* --- Tarjetas que son las (CARDS) --- */
+.profile-card-header, .grid-card {
+    background: var(--bg-card);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    box-shadow: 0 4px 15px var(--shadow);
+    margin-bottom: 30px;
+    border: 1px solid var(--bordes);
+    transition: background-color 0.3s ease;
+}
+
+.profile-card-header {
+    justify-content: space-between;
+}
+
+.profile-info-main {
+    display: flex;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e0f2f1;
+}
+
+.profile-photo-container {
+    position: relative;
+    margin-right: 25px;
+}
+
+.online-status {
+    width: 15px;
+    height: 15px;
+    background: #4caf50;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.profile-text h1 { font-size: 22px; color: var(--texto-p); }
+.specialty { color: var(--texto-s); margin: 5px 0 15px 0; font-size: 14px; }
+.stats-row { font-size: 12px; color: var(--texto-s); display: flex; gap: 15px; }
+
+.profile-actions { display: flex; flex-direction: column; gap: 8px; }
+.profile-actions button {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+    font-size: 13px;
+}
+
+.btn-edit { background: #26a69a; }
+.btn-planes { background: #00897b; }
+.btn-support { background: #00796b; }
+
+/* --- DASHBOARD GRID --- */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-card {
+    flex-direction: column;
+    padding: 20px;
+}
+
+.grid-card h3 { 
+    font-size: 15px; 
+    margin-bottom: 15px; 
+    color: var(--texto-p); 
+}
+
+.health-list { list-style: none; font-size: 13px; }
+.health-list li { margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; }
+.health-list i { color: #00897b; margin-right: 8px; }
+
+.team-member { display: flex; align-items: center; margin-bottom: 12px; font-size: 13px; color: var(--texto-p); }
+.mini-avatar { width: 30px; height: 30px; border-radius: 50%; margin-right: 10px; }
+
+.status-tag { font-size: 10px; padding: 2px 6px; border-radius: 8px; }
+.in-progress { background: #fff3e0; color: #ef6c00; }
+.completed { background: #e8f5e9; color: #2e7d32; }
+.pending { background: #f5f5f5; color: #777; }
+
+.chart-placeholder {
+    color: var(--texto-s);
+    text-align: center;
+    padding: 20px;
+    border: 1px dashed var(--bordes);
+    border-radius: 10px;
+}
