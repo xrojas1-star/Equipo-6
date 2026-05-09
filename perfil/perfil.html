@@ -61,13 +61,58 @@
         <section class="profile-section">
             <div class="profile-card-header">
                 <div class="profile-info-main">
-                    <div class="profile-photo-container">
-                        <img src="imagenes/perfil-sin-foto.png" alt="Maria López" class="profile-photo">
-                        <div class="online-status"></div>
-                    </div>
-                    <div class="profile-text">
-                        <h1>Maria López</h1>
-                        <p class="specialty">Especialista en Nutrición y Bienestar Corporal</p>
+
+    <!-- FOTO PERFIL -->
+    <div class="profile-avatar-container">
+
+        <img 
+            src="imagenes/perfil-sin-foto.png"
+            alt="Maria López"
+            class="profile-avatar"
+            id="profileImage"
+        >
+
+        <div class="online-status"></div>
+
+        <!-- Para cambiar de foto -->
+        <label for="uploadPhoto" class="change-photo-btn">
+            📷
+        </label>
+
+        <!-- ELIMINAR FOTO -->
+        <button class="remove-photo-btn" id="removePhoto">
+            ✖
+        </button>
+
+        <!-- INPUT -->
+        <input 
+            type="file"
+            id="uploadPhoto"
+            accept="image/*"
+            hidden
+        >
+
+    </div>
+
+    <!-- TEXTO PERFIL -->
+    <div class="profile-text">
+
+        <!-- BOTON NOMBRE -->
+        <button class="profile-name-btn">
+
+            <img 
+                src="imagenes/perfil-sin-foto.png"
+                class="mini-profile"
+                id="miniProfileImage"
+            >
+
+            <span>Maria López</span>
+
+        </button>
+
+        <p class="specialty">
+            Especialista en Nutrición y Bienestar Corporal
+        </p>
                         <div class="stats-row">
                             <span>Miembro desde: <strong>Enero 2024</strong></span>
                             <span>Programas: <strong>8</strong></span>
@@ -95,22 +140,53 @@
 
                 <div class="grid-card">
                     <h3>Mis Logros y Progresión</h3>
-                    <div class="chart-placeholder">
-                        <i class="fas fa-chart-line"></i> Reducción de Grasa Corporal
+                    <div class="achievement-item">
+                        <div class="achievement-info">
+                        <span>Reduccion de Grasa Corporal</span>
+                        <span class="percentage">75%</span>
+                    </div>
+                    <div class="Progress-card">
+                        <div class="Progress-fill" style="width: 75%;"></div> 
+                    </div>
+                    <p class="status-text"><i class="fas fa-fire"></i>¡Vas por buen camino!</p>
                     </div>
                 </div>
-
                 <div class="grid-card">
-                    <h3>Mi Equipo de Salud</h3>
-                    <div class="team-member">
-                        <img src="imagenes/hombre.png" class="mini-avatar" alt="Dr">
-                        <span>Dr. Benitez - Diabetólogo</span>
-                    </div>
-                    <div class="team-member">
-                        <img src="imagenes/mujer.png" class="mini-avatar" alt="Dra">
-                        <span>Dra. Garcia - Psicóloga</span>
-                    </div>
-                    </div>
+    <h3>Mi Equipo de Salud</h3>
+
+    <!-- CARD DOCTOR -->
+    <div class="team-member">
+
+        <div class="Avatar-wrapper">
+            <img src="imagenes/hombre.png" class="mini-avatar" alt="Dr">
+            <span class="status-dot online"></span>
+        </div>
+
+        <div class="member-info">
+            <strong>Dr. Benitez</strong>
+            <span>Diabetólogo</span>
+        </div>
+
+       
+    </div>
+
+    <!-- CARD DOCTORA -->
+    <div class="team-member">
+
+        <div class="Avatar-wrapper">
+            <img src="imagenes/mujer.png" class="mini-avatar" alt="Dra">
+            <span class="status-dot offline"></span>
+        </div>
+
+        <div class="member-info">
+            <strong>Dra. Garcia</strong>
+            <span>Psicóloga</span>
+        </div>
+
+        
+    </div>
+
+</div>
             </div>
         </section>
     </main>
@@ -126,5 +202,19 @@
         });
     </script>
 
+<div class="image-modal" id="imageModal">
+
+    <span class="close-modal" id="closeModal">
+        ✖
+    </span>
+
+    <img 
+        src=""
+        class="modal-image"
+        id="modalImage"
+    >
+
+</div>
 </body>
+<script src="perfil.js"></script>
 </html>

@@ -1,4 +1,4 @@
-/* 1. VARIABLES */
+/*VARIABLES */
 :root {
   --brand: #14b5d1;
   --brand-dark: #0d9ab3;
@@ -8,7 +8,7 @@
   --btn-text: #ffffff;
 }
 
-/* 2. ESTILOS GENERALES */
+/*ESTILOS GENERALES */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,10 +19,9 @@ body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
-/* 3. LAYOUT PRINCIPAL */
+/*LAYOUT PRINCIPAL */
 .login {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -52,7 +51,7 @@ body {
  position: relative;
 }
 
-/* 4. LOGO */
+/*LOGO */
 .brand {
   animation: fadeUp 0.8s ease forwards;
   margin-bottom: 20px;
@@ -65,10 +64,10 @@ body {
     margin-left: -60px;
     margin-bottom: 20px;
     position: relative;
-    top: -50px;
-    left: 30px;
+    top: -20px;
+    left: 60px;
 }
-/* 5. TÍTULO CON EFECTO NEÓN */
+/*TÍTULO CON EFECTO NEÓN */
 .neon-tittle {
     animation: fadeLeft 1s ease forwards;
     font-size: 70px; 
@@ -107,7 +106,7 @@ body {
     line-height: 1.4;
 }
 
-/* 6. BOTONES NEÓN */
+/*BOTONES NEÓN */
 .actions {
   animation: fadeUp 1s ease forwards;
   animation-delay: 0.6s;
@@ -132,12 +131,14 @@ padding: 15px 40px; /* Relleno interno real */
   background: var(--brand);
   color: var(--btn-text);
   border: none;
+  animation: fadeUp 0.8 ease forwards;
 }
 
 .btn--secondary {
   background: transparent;
   border: 2px solid var(--brand);
   color: var(--brand);
+  animation: fadeUp 1s ease forwards;
 }
 
 /* Hover de Botones */
@@ -162,7 +163,7 @@ background-size: cover;
 height: 100%;
 width: 100%;
 box-shadow: inset 100px 0 150px rgba(0, 0, 0,0 , 0.5);
-
+border-radius: 30px ;
 }
 @keyframes fadeUp {
     from {

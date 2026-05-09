@@ -94,7 +94,7 @@ body {
     border-right: 1px solid var(--bordes);
     flex-shrink: 0;
     transition: background-color 0.3s ease;
-}q
+}
 
 .logo-container {
     height: 100px;
@@ -236,19 +236,6 @@ body {
     align-items: center;
 }
 
-.profile-photo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #e0f2f1;
-}
-
-.profile-photo-container {
-    position: relative;
-    margin-right: 25px;
-}
-
 .online-status {
     width: 15px;
     height: 15px;
@@ -256,8 +243,8 @@ body {
     border: 2px solid #fff;
     border-radius: 50%;
     position: absolute;
-    bottom: 5px;
-    right: 5px;
+    bottom: 0px;
+    right: -3px;
 }
 
 .profile-text h1 { font-size: 22px; color: var(--texto-p); }
@@ -287,21 +274,126 @@ body {
 }
 
 .grid-card {
+    
+    background: var(--bg-card);
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
     flex-direction: column;
-    padding: 20px;
+    gap: 18px;
+    box-shadow: 0 4px 15px var(--shadow);
+    border: 1px solid var(--bordes);
 }
 
-.grid-card h3 { 
-    font-size: 15px; 
-    margin-bottom: 15px; 
-    color: var(--texto-p); 
+/* CADA TARJETA DEL DOCTOR */
+.team-member {
+    display: flex;
+    align-items: flex-start;
+    background: var(--bg-pantalla);
+    padding: 15px;
+    border-radius: 18px;
+    border: 1px solid var(--bordes);
+    width: 100%;
+    transition: all 0.3s ease;
+    gap: 15px;
 }
+
+.team-member:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.06);
+    border-color: var(--logo-color);
+}
+
+/* AVATAR */
+.Avatar-wrapper {
+    position: relative;
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+}
+
+.mini-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* ONLINE / OFFLINE */
+.status-dot {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.online {
+    background: #2ecc71;
+}
+
+.offline {
+    background: #95a5a6;
+}
+
+/* TEXTO */
+.member-info {
+    flex: 1;
+}
+
+.member-info strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: var(--texto-p);
+}
+
+.member-info span {
+    font-size: 12px;
+    color: var(--texto-s);
+}
+
+/* BOTONES */
+.member-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.btn-secondary,
+.btn-primary {
+    padding: 7px 14px;
+    border-radius: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-secondary {
+    border: 1px solid var(--logo-color);
+    background: transparent;
+    color: var(--logo-color);
+}
+
+.btn-primary {
+    border: none;
+    background: var(--logo-color);
+    color: white;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: scale(1.05);
+}
+
 
 .health-list { list-style: none; font-size: 13px; }
 .health-list li { margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; }
 .health-list i { color: #00897b; margin-right: 8px; }
 
-.team-member { display: flex; align-items: center; margin-bottom: 12px; font-size: 13px; color: var(--texto-p); }
+
 .mini-avatar { width: 30px; height: 30px; border-radius: 50%; margin-right: 10px; }
 
 .status-tag { font-size: 10px; padding: 2px 6px; border-radius: 8px; }
@@ -315,4 +407,224 @@ body {
     padding: 20px;
     border: 1px dashed var(--bordes);
     border-radius: 10px;
+}
+
+.achievement-item{
+margin-top: 20px;
+}
+
+.achievement-info{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--texto-p);
+}
+.percentage{
+    color: var(--logo-color);
+}
+
+.progress-bar{
+    background: var(--search-bg);
+    border-radius: 12px;
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.progress-fill{
+    background-color: var(--logo-color);
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 137, 124, 0.4);
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.status-text{
+    font-size: 11px;
+    color: var(--texto-s);
+    font-size: italic;
+}
+
+.profile-avatar-container{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+/* FOTO PRINCIPAL */
+
+.profile-avatar{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 4px solid var(--logo-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.profile-avatar:hover{
+    transform: scale(1.03);
+}
+
+/* BOTON CAMBIAR FOTO */
+
+.change-photo-btn{
+   position: absolute;
+    left: -20px;
+    bottom: -10px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--logo-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    border: 3px solid var(--bg-card);
+     box-shadow: 0 4px 10px rgba(0,0,0,0.15);   
+    z-index: 10;
+}
+
+.change-photo-btn:hover{
+    transform: scale(1.1);
+}
+
+/* BOTON ELIMINAR */
+
+.remove-photo-btn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    background: crimson;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 13px;
+}
+
+.remove-photo-btn:hover{
+    transform: scale(1.1);
+}
+
+/* BOTON NOMBRE */
+
+.profile-name-btn{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 10px;
+}
+
+.profile-name-btn:hover{
+    transform: translateY(-2px);
+}
+
+/* MINI FOTO */
+
+.mini-profile{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--logo-color);
+}
+
+.profile-name-btn span{
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--texto-p);
+}
+
+/* MODO OSCURO */
+
+body.dark-mode .change-photo-btn{
+    border: 2px solid #1a1a1a;
+}
+
+.image-modal{
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.75);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: 0.3s;
+
+    z-index: 9999;
+}
+
+/* Para abrir la foto */
+
+.image-modal.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Para ver en grande la foto */
+
+.modal-image{
+    width: 350px;
+    height: 350px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    border: 5px solid white;
+
+    transform: scale(0.8);
+
+    transition: 0.3s;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* ANIMACION */
+
+.image-modal.active .modal-image{
+    transform: scale(1);
+}
+
+/* BOTON CERRAR */
+
+.close-modal{
+    position: absolute;
+
+    top: 30px;
+    right: 40px;
+
+    font-size: 35px;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.close-modal:hover{
+    transform: scale(1.2);
 }
