@@ -1,0 +1,173 @@
+/* Variables de Color */
+:root {
+    --vitalis-green: #2d5a27;
+    --vitalis-light-bg: #f9fbf7;
+    --card-white: #ffffff;
+    --accent-color: #558b2f;
+    --text-dark: #333333;
+    --text-gray: #777777;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Configuración General */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #d1dbc8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Contenedor de la Infografía */
+.infographic-container {
+    background-color: var(--vitalis-light-bg);
+    width: 100%;
+    max-width: 950px;
+    border-radius: 40px;
+    padding: 50px;
+    box-shadow: 0 20px 40px var(--shadow);
+    position: relative;
+    border: 10px solid white;
+}
+
+/* Emojis Decorativos */
+.decoration {
+    position: absolute;
+    font-size: 50px;
+    opacity: 0.6;
+    z-index: 0;
+}
+.top-left { top: 20px; left: 20px; }
+.bottom-right { bottom: 20px; right: 20px; }
+
+/* Títulos */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    color: var(--text-dark);
+    font-size: 2.2rem;
+    margin: 0;
+    font-weight: 900;
+}
+
+.header p {
+    color: var(--accent-color);
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Caja de Estructura Central */
+.structure-box {
+    background-color: #f0f4eb;
+    border-radius: 25px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.structure-title {
+    background-color: #4a342e;
+    color: white;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 12px;
+    font-weight: bold;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* Cuadrícula de Pasos */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+}
+
+/* Tarjetas de Ejercicios */
+.step-card {
+    background: var(--card-white);
+    border-radius: 25px;
+    padding: 25px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    border: 1px solid #eef2eb;
+}
+
+.step-number {
+    background: var(--vitalis-green);
+    color: white;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    position: absolute;
+    top: -15px;
+    left: 20px;
+}
+
+.step-card h4 {
+    margin: 20px 0 8px 0;
+    color: var(--text-dark);
+    font-size: 1rem;
+}
+
+.step-card p {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    margin-bottom: 20px;
+}
+
+.step-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.time-badge {
+    background: #e1eedd;
+    color: #2e7d32;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 0.75rem;
+}
+
+/* Sección de Beneficios (Pills) */
+.footer-benefits h3 {
+    text-align: center;
+    font-size: 1rem;
+    color: #4a342e;
+    margin-bottom: 25px;
+}
+
+.pill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.pill {
+    background-color: var(--vitalis-green);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Adaptación para Celulares */
+@media (max-width: 600px) {
+    .infographic-container { padding: 30px 15px; }
+    .header h1 { font-size: 1.5rem; }
+}
