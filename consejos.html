@@ -54,10 +54,10 @@
                     <div class="card-body">
                         <ul>
                             <li><i class="fas fa-check"></i> 5 Superalimentos clave</li>
-                            <li><i class="fas fa-check"></i> Planificación semanal</li>
+                            <li><i class="fas fa-check"></i> Saludable</li>
                             <li><i class="fas fa-check"></i> Recetas sencillas</li>
                         </ul>
-                        <button class="btn-main">Leer más</button>
+                        <button class="btn-main" onclick="abrirAnuncio()">Leer más</button>
                     </div>
                 </div>
 
@@ -71,7 +71,7 @@
                             <li><i class="fas fa-check"></i> Reglas visual</li>
                             <li><i class="fas fa-check"></i> Manejo del estrés</li>
                         </ul>
-                        <button class="btn-main">Ver video</button>
+                        <button id="btnYoutube" class="btn-main">Ver video</button>
                     </div>
                 </div>
 
@@ -135,6 +135,24 @@
         </div>
     </div>
 
+    <div id="anuncioModal" class="modal-overlay">
+        <div class="modal-content" style="padding: 0; overflow: hidden; max-width: 500px;">
+            <div style="background-image: url('imagenes/frutas y verduras.png'); height: 200px; background-size: cover; background-position: center; display: flex; align-items: flex-end; padding: 20px; position: relative;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(transparent, rgba(0,0,0,0.8));"></div>
+                <h2 style="color: white; position: relative; z-index: 1; text-align: left; margin: 0;">Nutrición Inteligente: El Poder de los Superalimentos</h2>
+            </div>
+            <div style="padding: 25px; text-align: left;">
+                <ul style="list-style: none; padding: 0; font-size: 14px; color: #444;">
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--vitalis-teal);"></i> <strong>Arándanos:</strong> Potentes antioxidantes.</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--vitalis-teal);"></i> <strong>Espinacas:</strong> Rico en hierro y vitaminas.</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--vitalis-teal);"></i> <strong>Salmón:</strong> Omega-3 para el cerebro.</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--vitalis-teal);"></i> <strong>Quinoa:</strong> Proteína completa y fibra.</li>
+                </ul>
+                <button onclick="cerrarAnuncio()" class="btn-main" style="margin-top: 15px;">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
     <script>
         function abrirModal() {
             document.getElementById('logoutModal').style.display = 'flex';
@@ -147,7 +165,48 @@
         function confirmarSalida() {
             window.location.href = "inicio.html";
         }
+
+        // AGREGADO: Funciones para el anuncio
+        function abrirAnuncio() {
+            document.getElementById('anuncioModal').style.display = 'flex';
+        }
+
+        function cerrarAnuncio() {
+            document.getElementById('anuncioModal').style.display = 'none';
+        }
+// --- CONFIGURACIÓN DE YOUTUBE API ---
+const API_KEY = 'AIzaSyBLoji45B4MjRNABe09cocIZKtsE-RZhaM'; 
+const TERMINO_BUSQUEDA = '5 minutos mágicos para Calmar el Sistema Nervioso - Meditación Guiada';
+
+document.getElementById('btnYoutube').addEventListener('click', function() {
+  
+    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${encodeURIComponent(TERMINO_BUSQUEDA)}&type=video&key=${API_KEY}`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+         
+            if (data.error) {
+                console.error('Error de la API:', data.error.message);
+                alert('Error de YouTube: ' + data.error.message);
+                return;
+            }
+
+            if (data.items && data.items.length > 0) {
+                const videoId = data.items[0].id.videoId;
+              
+                window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+            } else {
+                console.log('Datos recibidos:', data);
+                alert('No se encontraron videos.');
+            }
+        })
+        .catch(error => {
+            console.error('Error de conexión:', error);
+            alert('Error de red o conexión.');
+        });
+});
     </script>
 
 </body>
-</html>
+</html> 
