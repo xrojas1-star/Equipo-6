@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vitalis - Panel de Salud</title>
     <link rel="stylesheet" href="salud.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
@@ -58,7 +59,7 @@
                             <li><span class="emoji checked">✔️</span> Tendencias de 30 días</li>
                             <li><span class="emoji checked">✔️</span> Ver detalles completos</li>
                         </ul>
-                        <button class="btn-primary">Ver Detalles</button>
+                        <button class="btn-primary" onclick="mostrarAnuncioMetricas()">Ver Detalles</button>
                     </div>
                 </div>
 
@@ -72,7 +73,7 @@
                             <li><span class="emoji checked">✔️</span> Resultados analítica: Listos</li>
                             <li><span class="emoji checked">✔️</span> Agendar nueva cita</li>
                         </ul>
-                        <button class="btn-primary">Ver Historial</button>
+                        <button class="btn-primary" onclick="mostrarAnuncioHistorial()">Ver Historial</button>
                     </div>
                 </div>
 
@@ -86,7 +87,7 @@
                             <li><span class="emoji checked">✔️</span> Magnesio: 8pm</li>
                             <li><span class="emoji checked">✔️</span> Próxima renovación de receta</li>
                         </ul>
-                        <button class="btn-primary">Gestionar Medicación</button>
+                        <button class="btn-primary" onclick="mostrarAnuncioMedicacion()">Gestionar Medicación</button>
                     </div>
                 </div>
             </div>
@@ -120,18 +121,129 @@
         </div>
     </div>
 
+    <div id="metricsAdModal" class="modal-overlay">
+        <div class="metrics-ad-card">
+            <span class="close-ad-x" onclick="ocultarAnuncioMetricas()">&times;</span>
+            <div class="ad-header">
+                <span class="ad-icon-heart">❤️</span>
+                <h2>Mis Métricas de Salud</h2>
+            </div>
+            <div class="ad-body">
+                <div class="ad-info-list">
+                    <p><i class="fas fa-check-double" style="color: #673ab7;"></i> <strong>Último Chequeo Integral:</strong> Septiembre 2024</p>
+                    <p class="ad-small-text">(Resultados Totales Listos) - Ver detalles individuales (e.g., Análisis de Sangre - Hierro/Glucosa)</p>
+                    <p><i class="fas fa-check-double" style="color: #673ab7;"></i> <strong>De Tendencias de 30 días</strong></p>
+                </div>
+                <h3 class="ad-section-title">TUS TENDENCIAS CLAVE DE 30 DÍAS</h3>
+                <div class="ad-charts-container">
+                    <div class="ad-chart-box">
+                        <p>Ritmo Cardíaco (bpm) <i class="fas fa-heartbeat" style="color: red;"></i></p>
+                        <div class="ad-simulated-graph heart-graph"></div>
+                    </div>
+                    <div class="ad-chart-box">
+                        <p>Análisis de Sangre <i class="fas fa-microscope" style="color: #00796b;"></i></p>
+                        <div class="ad-simulated-graph blood-graph"></div>
+                    </div>
+                </div>
+                <h3 class="ad-section-title">REVISIÓN DE RENOVACIONES Y SUPLEMENTOS</h3>
+                <table class="ad-metric-table">
+                    <thead>
+                        <tr><th>Time</th><th>Text</th><th>Texto</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>10:00</td><td>9am</td><td>Vit. D 9am</td></tr>
+                        <tr><td>10:00</td><td>8pm</td><td>Magnesio 8pm</td></tr>
+                        <tr><td>12:00</td><td>8pm</td><td>Próxima renovación de receta</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="historyAdModal" class="modal-overlay">
+        <div class="history-ad-card">
+            <span class="close-ad-x" onclick="ocultarAnuncioHistorial()">&times;</span>
+            <div class="history-header">
+                <h2>Tu Historial Completo de Citas Médicas</h2>
+                <p>SEGUIMIENTO DETALLADO DE TUS VISITAS CLAVE.</p>
+            </div>
+            <div class="history-body">
+                <div class="history-section">
+                    <h3>Resumen de tus últimas visitas:</h3>
+                    <ul>
+                        <li><i class="fas fa-user-md"></i> Cita Reciente: Dr. Ruiz (Gastro)</li>
+                        <li><i class="fas fa-flask"></i> Análisis de Resultados: Listos</li>
+                        <li><i class="fas fa-calendar-alt"></i> Siguientes Pasos: Agendar Nueva Cita</li>
+                    </ul>
+                </div>
+                <div class="history-section">
+                    <h3>Análisis de tendencias clave:</h3>
+                    <ul>
+                        <li><i class="fas fa-heartbeat" style="color: #ff5252;"></i> Historial de Citas Especializadas</li>
+                        <li><i class="fas fa-eye"></i> Ver Tu Histórico Completo</li>
+                    </ul>
+                </div>
+                <div class="history-section full-width">
+                    <h3>Ver Detalles Completos</h3>
+                    <p>Registro exhaustivo de diagnósticos y tratamientos para un control integral de tu salud.</p>
+                </div>
+            </div>
+            <button class="btn-close-ad" onclick="ocultarAnuncioHistorial()">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="medsAdModal" class="modal-overlay">
+        <div class="meds-ad-card">
+            <span class="close-ad-x" onclick="ocultarAnuncioMedicacion()">&times;</span>
+            <div class="meds-header">
+                <h2>TUS RECORDATORIOS DE MEDICACIÓN: DETALLES COMPLETOS</h2>
+                <p>SEGUIMIENTO PRECISO DE TUS SUPLEMENTOS Y RENOVACIONES.</p>
+            </div>
+            <div class="meds-body">
+                <div class="meds-grid">
+                    <div class="meds-section">
+                        <h3>Detalles de tus Suplementos:</h3>
+                        <ul>
+                            <li>💊 <strong>Suplemento Vit. D:</strong> Tomar 1 tableta, 9:00 AM (con el desayuno)</li>
+                            <li>💊 <strong>Magnesio:</strong> Tomar 1 tableta, 8:00 PM (antes de dormir)</li>
+                        </ul>
+                    </div>
+                    <div class="meds-section">
+                        <h3>Análisis de tendencias:</h3>
+                        <ul>
+                            <li>📊 Historial de Cumplimiento: 30 Días</li>
+                            <li>📋 Ver Tu Histórico Completo</li>
+                        </ul>
+                    </div>
+                    <div class="meds-section full-width-meds">
+                        <h3>Ver Detalles Completos</h3>
+                        <p>Un registro exhaustivo de horarios, dosis, fechas de inicio y final para una gestión de salud integral.</p>
+                    </div>
+                    <div class="meds-section full-width-meds highlight-box">
+                        <h3>Próxima Renovación de Receta:</h3>
+                        <p>📅 <strong>15 de Nov de 2024</strong> (e.g., para Suplemento Vit. D)</p>
+                        <p>💊 <strong>Medicación Actual:</strong> Suplemento Vit. D, Magnesio.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-close-ad" onclick="ocultarAnuncioMedicacion()">Cerrar</button>
+        </div>
+    </div>
+
     <script>
-        function mostrarModal() {
-            document.getElementById('logoutModal').style.display = 'flex';
-        }
+        function mostrarModal() { document.getElementById('logoutModal').style.display = 'flex'; }
+        function ocultarModal() { document.getElementById('logoutModal').style.display = 'none'; }
+        function confirmarSalida() { window.location.href = "inicio.html"; }
 
-        function ocultarModal() {
-            document.getElementById('logoutModal').style.display = 'none';
-        }
+        function mostrarAnuncioMetricas() { document.getElementById('metricsAdModal').style.display = 'flex'; }
+        function ocultarAnuncioMetricas() { document.getElementById('metricsAdModal').style.display = 'none'; }
 
-        function confirmarSalida() {
-            window.location.href = "inicio.html";
-        }
+        function mostrarAnuncioHistorial() { document.getElementById('historyAdModal').style.display = 'flex'; }
+        function ocultarAnuncioHistorial() { document.getElementById('historyAdModal').style.display = 'none'; }
+
+        // Funciones para el anuncio de medicación
+        function mostrarAnuncioMedicacion() { document.getElementById('medsAdModal').style.display = 'flex'; }
+        function ocultarAnuncioMedicacion() { document.getElementById('medsAdModal').style.display = 'none'; }
     </script>
 </body>
 </html>

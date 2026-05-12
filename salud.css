@@ -13,6 +13,7 @@ body {
     height: 100vh;
 }
 
+/* SIDEBAR */
 .sidebar {
     width: 280px;
     background-color: white;
@@ -22,7 +23,6 @@ body {
 }
 
 .logo { color: var(--vitalis-green); padding: 40px 30px 20px; font-size: 26px; font-weight: bold; }
-
 .nav-menu ul { list-style: none; padding: 0 15px; margin: 0; }
 
 .menu-item {
@@ -60,28 +60,10 @@ body {
     margin-right: 12px;
 }
 
-.profile-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.user-details {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.user-name {
-    font-size: 14px;
-    font-weight: 700;
-    color: #333;
-}
-
-.user-email {
-    font-size: 11px;
-    color: #888;
-}
+.profile-img { width: 100%; height: 100%; object-fit: cover; }
+.user-details { display: flex; flex-direction: column; flex-grow: 1; }
+.user-name { font-size: 14px; font-weight: 700; color: #333; }
+.user-email { font-size: 11px; color: #888; }
 
 .logout-btn {
     background: none;
@@ -92,9 +74,9 @@ body {
     align-items: center;
     transition: transform 0.2s;
 }
-
 .logout-btn:hover { transform: translateX(3px); }
 
+/* MAIN CONTENT */
 .main-content { flex-grow: 1; padding: 60px 50px; overflow-y: auto; }
 .section-title { font-size: 32px; margin-bottom: 8px; color: #222; }
 .panel-subtitle { color: #777; margin-bottom: 45px; }
@@ -108,15 +90,10 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.03);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.info-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
-}
+.info-card:hover { transform: translateY(-8px); box-shadow: 0 12px 25px rgba(0,0,0,0.08); }
 
 .card-header { height: 130px; display: flex; align-items: center; justify-content: center; background-size: cover; background-position: center; }
-
-.metrics-header { background-image: url("imagenes/metricas\ de\ salud.png"); background-color: #fce4ec; }
+.metrics-header { background-image: url("imagenes/metricas de salud.png"); background-color: #fce4ec; }
 .appointments-header { background-image: url("imagenes/historial.png"); background-color: #e3f2fd; }
 .medication-header { background-image: url("imagenes/recordatorios.png"); background-color: #fff3e0; }
 
@@ -141,80 +118,97 @@ body {
 .bottom-card { background: white; border-radius: 25px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); max-width: 450px; }
 .community-input input { width: 100%; padding: 15px; border-radius: 12px; border: 1px solid #eee; background: #fcfcfc; }
 
+/* MODALES BASE */
 .modal-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
-    display: none; 
-    justify-content: center;
-    align-items: center;
+    display: none; justify-content: center; align-items: center;
     z-index: 1000;
 }
 
 .modal-card {
-    background-color: white;
-    padding: 40px;
-    border-radius: 30px;
-    text-align: center;
-    max-width: 450px;
-    width: 90%;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background-color: white; padding: 40px; border-radius: 30px;
+    text-align: center; max-width: 450px; width: 90%;
 }
 
 .modal-header-icon {
-    width: 60px;
-    height: 60px;
-    border: 3px solid var(--modal-green-dark);
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 60px; height: 60px; border: 3px solid var(--modal-green-dark);
+    border-radius: 15px; display: flex; justify-content: center; align-items: center;
     margin: 0 auto 20px;
 }
 
-.modal-card h2 {
-    color: var(--modal-green-dark);
-    font-size: 22px;
-    margin-bottom: 12px;
+.modal-actions { display: flex; gap: 15px; justify-content: center; }
+.btn-exit { background-color: var(--modal-green-dark); color: white; border: none; padding: 14px 28px; border-radius: 12px; font-weight: bold; cursor: pointer; }
+.btn-cancel { background-color: #e0f2f1; color: var(--modal-green-dark); border: 2px solid var(--modal-green-dark); padding: 14px 28px; border-radius: 12px; font-weight: bold; cursor: pointer; }
+
+/* --- ESTILOS DE LOS ANUNCIOS (CON SCROLL AGREGADO) --- */
+.metrics-ad-card, .history-ad-card, .meds-ad-card {
+    background: white; 
+    width: 95%; 
+    max-width: 580px;
+    border-radius: 25px; 
+    padding: 35px; 
+    position: relative;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+    
+    /* Configuración para el desplazamiento */
+    max-height: 85vh;           /* Altura máxima para no salir de pantalla */
+    overflow-y: auto;           /* Muestra la barra si el contenido es largo */
+    scrollbar-width: thin;      /* Estilo para Firefox */
+    scrollbar-color: #ccc #f1f1f1;
 }
 
-.modal-card p {
-    color: #666;
-    font-size: 15px;
-    line-height: 1.5;
-    margin-bottom: 30px;
+/* Personalización de la barra para Chrome/Safari */
+.metrics-ad-card::-webkit-scrollbar, 
+.history-ad-card::-webkit-scrollbar, 
+.meds-ad-card::-webkit-scrollbar {
+    width: 8px;
+}
+.metrics-ad-card::-webkit-scrollbar-thumb, 
+.history-ad-card::-webkit-scrollbar-thumb, 
+.meds-ad-card::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
 }
 
-.modal-actions {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
+.close-ad-x { position: absolute; top: 15px; right: 20px; font-size: 30px; color: #bbb; cursor: pointer; }
 
-.btn-exit {
-    background-color: var(--modal-green-dark);
-    color: white;
-    border: none;
-    padding: 14px 28px;
-    border-radius: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s;
-}
+/* ESPECÍFICOS MEDICACIÓN (NUEVO) */
+.meds-header { text-align: center; margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+.meds-header h2 { font-size: 20px; color: #222; margin-bottom: 5px; text-transform: uppercase; }
+.meds-header p { font-size: 11px; color: #888; font-weight: bold; letter-spacing: 1px; }
 
-.btn-cancel {
-    background-color: #e0f2f1;
-    color: var(--modal-green-dark);
-    border: 2px solid var(--modal-green-dark);
-    padding: 14px 28px;
-    border-radius: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s;
-}
+.meds-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.meds-section { background: #fdfdfd; padding: 18px; border-radius: 15px; border: 1px solid #f0f0f0; }
+.meds-section h3 { font-size: 13px; margin-bottom: 12px; color: #333; font-weight: 800; border-left: 3px solid var(--vitalis-green); padding-left: 10px; }
+.meds-section ul { list-style: none; padding: 0; margin: 0; }
+.meds-section li { font-size: 12.5px; margin-bottom: 10px; color: #555; line-height: 1.5; }
 
-.btn-exit:hover { background-color: #002e26; }
-.btn-cancel:hover { background-color: #b2dfdb; }
+.full-width-meds { grid-column: span 2; }
+.highlight-box { background-color: #f0f7f6; border: 1px dashed var(--vitalis-green); }
+.highlight-box p { font-size: 13px; margin: 5px 0; color: #444; }
+
+.btn-close-ad {
+    display: block; width: fit-content; margin: 20px auto 0;
+    background-color: var(--vitalis-green); color: white;
+    border: none; padding: 12px 45px; border-radius: 10px;
+    cursor: pointer; font-weight: bold; transition: background 0.3s;
+}
+.btn-close-ad:hover { background-color: var(--modal-green-dark); }
+
+/* ESTILOS PREVIOS (MÉTRICAS Y OTROS) */
+.ad-header { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 25px; }
+.ad-header h2 { font-size: 22px; margin: 0; color: #222; }
+.ad-info-list { text-align: left; margin-bottom: 20px; }
+.ad-info-list p { font-size: 14px; margin: 8px 0; }
+.ad-small-text { font-size: 12px; color: #777; margin-left: 28px !important; line-height: 1.4; }
+.ad-section-title { font-size: 12px; color: #444; font-weight: 800; margin: 25px 0 12px; text-align: center; text-transform: uppercase; }
+.ad-charts-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px; }
+.ad-chart-box p { font-size: 11px; font-weight: 700; margin-bottom: 8px; }
+.ad-simulated-graph { height: 90px; background: #fafafa; border-left: 2px solid #555; border-bottom: 2px solid #555; }
+.heart-graph { background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,0,0,0.1) 10px, rgba(255,0,0,0.1) 11px); }
+.blood-graph { background-image: linear-gradient(0deg, transparent 20%, rgba(0,121,107,0.1) 21%, transparent 22%); background-size: 100% 15px; }
+.ad-metric-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 10px; }
+.ad-metric-table th { text-align: left; padding: 8px 5px; border-bottom: 2px solid #333; }
+.ad-metric-table td { padding: 10px 5px; border-bottom: 1px solid #eee; }

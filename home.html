@@ -289,7 +289,7 @@
     </div>
 
     <script>
-        // Lógica de "Ver más"
+
         const btnMore = document.getElementById('btn-show-more');
         const btnLess = document.getElementById('btn-show-less');
         const extras = document.querySelectorAll('.extra-content');
@@ -307,7 +307,6 @@
             document.querySelector('.section-title').scrollIntoView({ behavior: 'smooth' });
         });
 
-        // LÓGICA DE LOS MODALES
         const modalTerminos = document.getElementById('modalTerminos');
         const modalContacto = document.getElementById('modalContacto');
         const modalPrivacidad = document.getElementById('modalPrivacidad');
@@ -320,15 +319,12 @@
         const closeContacto = document.getElementById('btnCerrarContacto');
         const closePrivacidad = document.getElementById('btnAceptarPrivacidad');
 
-        // Abrir/Cerrar Términos
         openTerminos.addEventListener('click', function(e) { e.preventDefault(); modalTerminos.style.display = 'flex'; });
         closeTerminos.addEventListener('click', function() { modalTerminos.style.display = 'none'; });
 
-        // Abrir/Cerrar Contacto
         openContacto.addEventListener('click', function(e) { e.preventDefault(); modalContacto.style.display = 'flex'; });
         closeContacto.addEventListener('click', function() { modalContacto.style.display = 'none'; });
 
-        // Abrir/Cerrar Privacidad
         openPrivacidad.addEventListener('click', function(e) { e.preventDefault(); modalPrivacidad.style.display = 'flex'; });
         closePrivacidad.addEventListener('click', function() { modalPrivacidad.style.display = 'none'; });
     </script>
