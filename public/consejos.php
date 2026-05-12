@@ -1,9 +1,11 @@
 <?php
 session_start();
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['user_id']) && empty($_SESSION['es_visitante'])) {
     header("Location: login.php");
     exit();
 }
+// Si tiene sesión real, limpiar flag visitante
+if (!empty($_SESSION['user_id'])) { unset($_SESSION['es_visitante']); }
 // Evita que el navegador guarde esta página en caché
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Cache-Control: post-check=0, pre-check=0", false);
@@ -22,7 +24,9 @@ header("Pragma: no-cache");
 <body>
 
 <aside class="sidebar">
-    <a href="home.php" class="logo">VITALIS</a>
+    <a href="home.php" class="logo-link">
+        <img src="assets/img/logovitalis.png" alt="Vitalis" class="sidebar-logo">
+    </a>
     <nav>
         <ul>
             <li><a href="home.php">🏠 Inicio</a></li>
@@ -30,8 +34,15 @@ header("Pragma: no-cache");
             <li class="active"><a href="consejos.php">🔍 Consejos</a></li>
             <li><a href="salud.php">💚 Salud</a></li>
             <li><a href="bienestar.php">❤️ Bienestar</a></li>
+            <li class="nav-cursos"><a href="cursos.php">🎓 Cursos</a></li>
+            <li class="nav-juegos"><a href="juegos_bienestar.php">🎮 Juegos Bienestar</a></li>
+            <?php if (empty($_SESSION['es_visitante'])): ?>
             <li><a href="perfil.php">👤 Mi Perfil</a></li>
+            <?php endif; ?>
             <li><a href="notificaciones.php">🔔 Notificaciones</a></li>
+            <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin'): ?>
+            <li><a href="panel_de_administracion.php">⚙️ Panel Admin</a></li>
+            <?php endif; ?>
         </ul>
     </nav>
 </aside>
@@ -115,6 +126,32 @@ header("Pragma: no-cache");
         </div>
     </section>
 </div>
+
+
+<!-- Modal de confirmación de logout -->
+<div id="logoutModal" class="modal-overlay">
+    <div class="modal-card">
+        <div class="modal-icon">🚪</div>
+        <h2>¿Deseas cerrar sesión?</h2>
+        <p>Se perderán los progresos no guardados en tus rutinas de salud actuales.</p>
+        <div class="modal-btns">
+            <button class="btn-confirmar" onclick="confirmarLogout()">Sí, Salir</button>
+            <button class="btn-cancelar" onclick="cerrarModal()">No, Cancelar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+function abrirModal() {
+    document.getElementById('logoutModal').style.display = 'flex';
+}
+function cerrarModal() {
+    document.getElementById('logoutModal').style.display = 'none';
+}
+function confirmarLogout() {
+    window.location.href = '../controllers/LogoutController.php';
+}
+</script>
 
 </body>
 </html>

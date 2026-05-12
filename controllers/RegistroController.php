@@ -42,9 +42,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // 7. Ejecutamos la consulta
         if ($stmt->execute()) {
             // Guardamos la sesión para que home.php no rechace al usuario
+            // Limpiar sesión visitante si existía
+            session_unset();
+            session_regenerate_id(true);
             $_SESSION['user_id']   = $db->lastInsertId();
             $_SESSION['user_name'] = $nombre;
-            $_SESSION['user_role'] = 'usuario';
+            $_SESSION['user_role'] = 'autor';
+            unset($_SESSION['es_visitante']);
 
             echo "<script>
                     alert('¡Registro exitoso! Bienvenido a Vitalis.');

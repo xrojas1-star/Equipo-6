@@ -1,107 +1,54 @@
-/* salud.css — solo contenido de la página Salud */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
-.section-title {
-    font-size: 26px;
-    margin-bottom: 6px;
-    color: #222;
+:root {
+    --teal: #2bbbad;
+    --teal-dark: #00897b;
+    --teal-glow: rgba(43,187,173,0.12);
+    --shadow: 0 4px 24px rgba(0,0,0,0.06);
+    --shadow-hover: 0 12px 40px rgba(43,187,173,0.18);
+    --border: rgba(43,187,173,0.15);
+    --text: #1a2332;
+    --muted: #64748b;
 }
 
-.panel-subtitle {
-    color: #777;
-    margin-bottom: 30px;
-    font-size: 14px;
-}
+.section-title { font-size: 26px; font-weight: 800; color: var(--text); font-family: 'Outfit', sans-serif; margin-bottom: 6px; }
+.panel-subtitle { color: var(--muted); margin-bottom: 30px; font-size: 14px; font-family: 'Outfit', sans-serif; }
 
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-bottom: 30px;
-}
+.cards-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 28px; }
 
 .info-card {
     background: white;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    animation: fadeSlideIn 0.5s ease both;
 }
+.info-card:nth-child(1) { animation-delay: 0.05s; }
+.info-card:nth-child(2) { animation-delay: 0.15s; }
+.info-card:nth-child(3) { animation-delay: 0.25s; }
+.info-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); border-color: var(--teal); }
 
-.info-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-.card-header {
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #e0f2f1;
-}
-
-.card-header h3 {
-    background: rgba(255,255,255,0.92);
-    padding: 8px 16px;
-    border-radius: 10px;
-    font-size: 13px;
-    color: #333;
-    text-align: center;
-}
+.card-header { height: 120px; display: flex; align-items: center; justify-content: center; background-size: cover; background-position: center; position: relative; }
+.card-header::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.15); }
+.card-header h3 { background: rgba(255,255,255,0.95); padding: 8px 16px; border-radius: 999px; font-size: 12px; color: var(--text); font-weight: 700; font-family: 'Outfit', sans-serif; position: relative; z-index: 1; }
 
 .metrics-header     { background-color: #fce4ec; }
 .appointments-header { background-color: #e3f2fd; }
 .medication-header  { background-color: #fff3e0; }
 
-.card-content {
-    padding: 20px;
-}
+.card-content { padding: 20px; }
+.card-content ul { list-style: none; margin-bottom: 16px; }
+.card-content li { margin-bottom: 8px; font-size: 13px; color: var(--muted); font-family: 'Outfit', sans-serif; display: flex; align-items: center; gap: 6px; }
 
-.card-content ul {
-    list-style: none;
-    margin-bottom: 16px;
-}
+.btn-primary { width: 100%; background: linear-gradient(135deg, var(--teal), var(--teal-dark)); color: white; border: none; padding: 11px; border-radius: 999px; cursor: pointer; font-weight: 700; font-size: 13px; font-family: 'Outfit', sans-serif; box-shadow: 0 4px 15px rgba(43,187,173,0.3); transition: transform 0.2s, box-shadow 0.2s; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(43,187,173,0.4); }
 
-.card-content li {
-    margin-bottom: 8px;
-    font-size: 13px;
-    color: #555;
-}
+.bottom-card { background: white; border-radius: 20px; padding: 22px; box-shadow: var(--shadow); border: 1px solid var(--border); max-width: 420px; animation: fadeSlideIn 0.5s ease 0.3s both; }
+.bottom-card h3 { font-size: 15px; font-weight: 700; color: var(--text); font-family: 'Outfit', sans-serif; margin-bottom: 14px; }
 
-.btn-primary {
-    width: 100%;
-    background: #00796b;
-    color: white;
-    border: none;
-    padding: 11px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 13px;
-    transition: opacity 0.2s;
-}
+.community-input input { width: 100%; padding: 12px 18px; border-radius: 999px; border: 2px solid var(--border); font-size: 13px; font-family: 'Outfit', sans-serif; outline: none; transition: border-color 0.3s, box-shadow 0.3s; box-sizing: border-box; }
+.community-input input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-glow); }
 
-.btn-primary:hover { opacity: 0.88; }
-
-.bottom-card {
-    background: white;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    max-width: 420px;
-}
-
-.bottom-card h3 {
-    font-size: 15px;
-    margin-bottom: 12px;
-}
-
-.community-input input {
-    width: 100%;
-    padding: 11px 16px;
-    border-radius: 12px;
-    border: 1px solid #ddd;
-    background: #fcfcfc;
-    font-size: 13px;
-    outline: none;
-}
+@keyframes fadeSlideIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
