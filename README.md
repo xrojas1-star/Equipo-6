@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Estado-En%20Desarrollo-2bbbad?style=flat-square">
+  <img src="https://img.shields.io/badge/Estado-Terminado-2bbbad?style=flat-square">
   <img src="https://img.shields.io/badge/ODS-3%20Salud%20y%20Bienestar-00897b?style=flat-square">
   <img src="https://img.shields.io/badge/Licencia-Académica-blue?style=flat-square">
 </p>
