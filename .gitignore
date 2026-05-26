@@ -1,8 +1,14 @@
 # ══ CREDENCIALES Y ARCHIVOS SENSIBLES ══
 config/database.php
+config/Database.php
 config/sightengine.php
 config/mail.php
 config/env.php
+public/config/database.php
+public/config/Database.php
+public/config/sightengine.php
+public/config/mail.php
+public/config/env.php
 .env
 .env.local
 
