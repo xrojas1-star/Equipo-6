@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --teal: #2bbbad;
+    --teal-dark: #00897b;
+    --teal-glow: rgba(43,187,173,0.12);
+    --shadow: 0 4px 24px rgba(0,0,0,0.06);
+    --shadow-hover: 0 12px 40px rgba(43,187,173,0.18);
+    --border: rgba(43,187,173,0.15);
+    --text: #1a2332;
+    --muted: #64748b;
+}
+
+.tips-header { margin-bottom: 28px; animation: fadeSlideIn 0.4s ease both; }
+.tips-header h1 { text-align: center; color: var(--text); font-size: 1.15rem; font-weight: 800; font-family: 'Outfit', sans-serif; letter-spacing: 0.5px; line-height: 1.4; }
+
+.grid-tips { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+
+.card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    min-height: 160px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    animation: fadeSlideIn 0.5s ease both;
+    position: relative;
+    overflow: hidden;
+}
+.card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--teal), var(--teal-dark)); }
+.card:nth-child(1) { animation-delay: 0.05s; }
+.card:nth-child(2) { animation-delay: 0.12s; }
+.card:nth-child(3) { animation-delay: 0.19s; }
+.card:nth-child(4) { animation-delay: 0.26s; }
+.card:nth-child(5) { animation-delay: 0.33s; }
+.card:nth-child(6) { animation-delay: 0.40s; }
+.card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); border-color: var(--teal); }
+
+.card-header { background: linear-gradient(135deg, var(--teal), var(--teal-dark)); color: white; font-size: 10px; font-weight: 800; font-family: 'Outfit', sans-serif; padding: 4px 12px; border-radius: 999px; width: fit-content; margin-bottom: 12px; letter-spacing: 0.5px; text-transform: uppercase; }
+
+.card-content { display: flex; justify-content: space-between; align-items: flex-start; flex: 1; }
+
+.text h2 { font-size: 0.95rem; margin: 0 0 8px 0; color: var(--text); font-family: 'Outfit', sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: 0.3px; }
+.text p { font-size: 0.85rem; margin: 0; line-height: 1.5; color: var(--muted); font-family: 'Outfit', sans-serif; }
+.footer-text { margin-top: 10px !important; font-size: 0.82rem !important; color: var(--muted); font-family: 'Outfit', sans-serif; }
+
+.icon { font-size: 2.6rem; opacity: 0.85; margin-left: 12px; flex-shrink: 0; }
+
+@keyframes fadeSlideIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }

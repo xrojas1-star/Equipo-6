@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --teal: #2bbbad;
+    --teal-dark: #00897b;
+    --teal-glow: rgba(43,187,173,0.12);
+    --shadow: 0 4px 24px rgba(0,0,0,0.06);
+    --shadow-hover: 0 12px 40px rgba(43,187,173,0.18);
+    --border: rgba(43,187,173,0.15);
+    --text: #1a2332;
+    --muted: #64748b;
+}
+
+.section-title { font-size: 22px; font-weight: 800; color: var(--text); font-family: 'Outfit', sans-serif; margin-bottom: 4px; }
+.date-badge { font-size: 12px; background: var(--teal-glow); color: var(--teal-dark); padding: 3px 12px; border-radius: 999px; margin-left: 10px; font-weight: 600; font-family: 'Outfit', sans-serif; }
+.subtitle { color: var(--muted); font-size: 14px; margin-bottom: 20px; font-family: 'Outfit', sans-serif; }
+
+/* ── FILTRO CATEGORÍAS ── */
+.category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.cat-btn {
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 2px solid var(--border);
+    background: #fff;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+.cat-btn:hover { border-color: var(--teal); color: var(--teal-dark); background: var(--teal-glow); }
+.cat-btn.active { background: linear-gradient(135deg, var(--teal), var(--teal-dark)); color: #fff; border-color: transparent; box-shadow: 0 4px 12px rgba(43,187,173,0.35); }
+
+/* ── TARJETAS ── */
+.main-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.content-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    animation: fadeSlideIn 0.5s ease both;
+}
+.content-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); border-color: var(--teal); }
+
+.card-image {
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 14px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    gap: 6px;
+}
+.card-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 20%, rgba(0,0,0,0.6));
+}
+.card-image h3 {
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Outfit', sans-serif;
+    position: relative;
+    z-index: 1;
+    line-height: 1.3;
+    margin: 0;
+}
+.card-tag {
+    position: relative;
+    z-index: 1;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: 'Outfit', sans-serif;
+    padding: 3px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.35);
+}
+
+/* ── IMÁGENES DE TARJETAS ── */
+.nutrition   { background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.55)), url('../img/Nutrición_Inteligentel_Poder_de_los_Superalimentos.png') center/cover; }
+.mental      { background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.55)), url('../img/Salud_Mental_Micro_Pausas_de_Mindfulness.png') center/cover; }
+.mobility    { background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.55)), url('../img/Movilidad_Activa_Mejora_tu_Rutina_Física.png') center/cover; }
+.asma-card   { background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.55)), url('../img/Respiración_Control_del_Asma.png') center/cover; }
+.asma-card2  { background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.55)), url('../img/Actividad_Física_Segura_para_Personas_con_Asma.png') center/cover; }
+.asma-card3  { background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.55)), url('../img/Alimentación_Anti_inflamatoria_para_Asmáticos.png') center/cover; }
+.diabetes-card  { background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.55)), url('../img/Control_de_Glucosa_Hábitos_Clave_Diarios.png') center/cover; }
+.diabetes-card2 { background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.55)), url('../img/Alimentación_para_Diabéticos_Plato_del_Buen_Comer.png') center/cover; }
+.diabetes-card3 { background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.55)), url('../img/Ejercicio_Seguro_con_Diabetes_Tipo_1_y_2.png') center/cover; }
+.hiper-card  { background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.55)), url('../img/Reducir_la_Presión_Arterial_con_Cambios_de_Estilo_de_Vida.png') center/cover; }
+.hiper-card2 { background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.55)), url('../img/Ejercicio_Seguro_para_Controlar_la_Presión.png') center/cover; }
+.hiper-card3 { background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.55)), url('../img/Manejo_del_Estrés_en_Hipertensos.png') center/cover; }
+.mayor-card  { background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.55)), url('../img/Nutrición_Esencial_para_Mayores_de_60_Años.png') center/cover; }
+.mayor-card2 { background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.55)), url('../img/Ejercicios_de_Equilibrio_y_Fuerza_para_Mayores.png') center/cover; }
+.mayor-card3 { background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.55)), url('../img/Salud_Mental_y_Social_en_la_Tercera_Edad.png') center/cover; }
+.emb-card    { background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.55)), url('../img/Nutrición_Durante_el_Embarazo_Lo_Esencial.png') center/cover; }
+.emb-card2   { background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.55)), url('../img/Actividad_Física_Segur_en_el_Embarazo.png') center/cover; }
+.emb-card3   { background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.55)), url('../img/Bienestar_Emocional_Durante_la_Gestación.png') center/cover; }
+
+.card-body { padding: 16px; }
+.card-body ul { list-style: none; margin-bottom: 14px; padding: 0; }
+.card-body ul li { font-size: 13px; color: var(--muted); margin-bottom: 7px; font-family: 'Outfit', sans-serif; display: flex; align-items: flex-start; gap: 7px; line-height: 1.4; }
+.card-body ul li i { color: var(--teal); font-size: 11px; margin-top: 2px; flex-shrink: 0; }
+
+.btn-main { width: 100%; padding: 10px; border: none; border-radius: 999px; background: linear-gradient(135deg, var(--teal), var(--teal-dark)); color: #fff; font-size: 13px; font-weight: 700; font-family: 'Outfit', sans-serif; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 15px rgba(43,187,173,0.3); }
+.btn-main:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(43,187,173,0.4); }
+
+/* ── BOTTOM GRID ── */
+.bottom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.quick-tips, .community-section {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    animation: fadeSlideIn 0.5s ease 0.3s both;
+}
+
+.quick-tips h3, .community-section h3 { font-size: 15px; font-weight: 700; color: var(--text); font-family: 'Outfit', sans-serif; margin-bottom: 16px; }
+.community-desc { font-size: 13px; color: var(--muted); font-family: 'Outfit', sans-serif; margin-bottom: 14px; line-height: 1.5; }
+
+.tip-item { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--muted); font-family: 'Outfit', sans-serif; padding: 10px 0; border-bottom: 1px solid var(--border); }
+.tip-item:last-child { border-bottom: none; }
+.tip-item input[type="checkbox"] { accent-color: var(--teal); width: 16px; height: 16px; cursor: pointer; }
+
+.comment-input { display: flex; gap: 8px; }
+.comment-input input { flex: 1; padding: 11px 16px; border-radius: 999px; border: 2px solid var(--border); font-size: 13px; font-family: 'Outfit', sans-serif; outline: none; transition: border-color 0.3s, box-shadow 0.3s; }
+.comment-input input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-glow); }
+.btn-send-tip { background: linear-gradient(135deg, var(--teal), var(--teal-dark)); color: white; border: none; padding: 11px 20px; border-radius: 999px; font-size: 13px; font-weight: 700; font-family: 'Outfit', sans-serif; cursor: pointer; white-space: nowrap; box-shadow: 0 4px 12px rgba(43,187,173,0.3); transition: transform 0.2s; }
+.btn-send-tip:hover { transform: translateY(-2px); }
+
+.main-panel { background: #fff; border-radius: 24px; padding: 28px; box-shadow: var(--shadow); border: 1px solid var(--border); }
+
+@keyframes fadeSlideIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ════════════════════════════════════════
+   DARK MODE
+   ════════════════════════════════════════ */
+body.dark-mode .section-title { color: #e2e8f0; }
+body.dark-mode .subtitle { color: #64748b; }
+body.dark-mode .main-panel { background: #0d1117; border-color: #1e2830; box-shadow: none; }
+
+body.dark-mode .cat-btn { background: #0d1117; border-color: #1e2830; color: #94a3b8; }
+body.dark-mode .cat-btn:hover { background: #134e4a; color: #2bbbad; border-color: #2bbbad; }
+body.dark-mode .cat-btn.active { background: linear-gradient(135deg, var(--teal), var(--teal-dark)); color: #fff; border-color: transparent; }
+
+body.dark-mode .content-card { background: #0d1117; border-color: #1e2830; box-shadow: none; }
+body.dark-mode .content-card:hover { border-color: var(--teal); }
+body.dark-mode .card-body ul li { color: #94a3b8; }
+
+body.dark-mode .quick-tips,
+body.dark-mode .community-section { background: #0d1117; border-color: #1e2830; box-shadow: none; }
+body.dark-mode .quick-tips h3,
+body.dark-mode .community-section h3 { color: #e2e8f0; }
+body.dark-mode .community-desc { color: #64748b; }
+body.dark-mode .tip-item { color: #94a3b8; border-bottom-color: #1e2830; }
+body.dark-mode .comment-input input { background: #161b22; border-color: #1e2830; color: #e2e8f0; }
+body.dark-mode .comment-input input::placeholder { color: #4b5563; }

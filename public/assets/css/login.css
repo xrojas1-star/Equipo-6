@@ -1,0 +1,259 @@
+:root {
+  --brand: #14b5d1;
+  --brand-dark: #0d9ab3;
+  --text-title: #5a5e64;
+  --text-input: #6a6a6a;
+  --text-placeholder: #b8b8b8;
+  --text-forgot: #a9a9a9;
+  --line: #cfcfcf;
+  --panel: rgba(255,255,255,.75);
+  --shadow: 0 20px 60px rgba(0,0,0,.12);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+}
+
+.login {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1.1fr;
+}
+
+/* ---- LADO IZQUIERDO ---- */
+.login__left {
+  background: radial-gradient(1200px 700px at 20% 15%, rgba(255,255,255,.95), rgba(230,245,248,.75));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 34px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Círculos decorativos */
+.login__left::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(20, 181, 209, 0.07);
+  border-radius: 50%;
+  top: -60px;
+  right: -60px;
+  animation: floatBubble 6s ease-in-out infinite;
+}
+
+.login__left::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: rgba(20, 181, 209, 0.05);
+  border-radius: 50%;
+  bottom: 30px;
+  left: -50px;
+  animation: floatBubble 8s ease-in-out infinite reverse;
+}
+
+/* ---- PANEL ---- */
+.panel {
+  width: min(420px, 100%);
+  padding: clamp(18px, 3.2vw, 36px);
+  border-radius: 28px;
+  background: var(--panel);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255,255,255,.6);
+  position: relative;
+  z-index: 1;
+  animation: slideUp 0.7s ease forwards;
+}
+
+/* ---- LOGO ---- */
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 80px;
+  margin-bottom: 20px;
+  animation: fadeDown 0.6s ease forwards;
+}
+
+.brand__logo {
+  width: 450px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  transform: translate(-90px, -5px);
+  pointer-events: none;
+}
+
+/* ---- TÍTULO ---- */
+h1 {
+  margin: 0 0 25px;
+  font-size: 56px;
+  line-height: 0.95;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--text-title);
+  animation: fadeLeft 0.6s ease 0.15s both;
+}
+
+/* ---- FORMULARIO ---- */
+.form { width: 100%; }
+
+.field {
+  display: block;
+  margin-bottom: 16px;
+  animation: fadeLeft 0.6s ease both;
+}
+
+.field:nth-child(1) { animation-delay: 0.25s; }
+.field:nth-child(2) { animation-delay: 0.35s; }
+
+.field input {
+  width: 100%;
+  height: 52px;
+  padding: 0 20px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255,255,255,.80);
+  outline: none;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-input);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.field input:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(20,181,209,0.15);
+  background: #fff;
+}
+
+.field input::placeholder { color: var(--text-placeholder); }
+
+/* ---- BOTÓN ---- */
+.btn {
+  width: 100%;
+  height: 55px;
+  margin-top: 4px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(20,181,209,0.35);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeUp 0.6s ease 0.45s both;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(20,181,209,0.45);
+}
+
+.btn:active { transform: translateY(0); }
+
+/* ---- LINKS ---- */
+.forgot {
+  width: 100%;
+  margin: 18px 0 0;
+  text-align: center;
+  animation: fadeUp 0.6s ease 0.55s both;
+}
+
+.forgot a {
+  text-decoration: none;
+  color: var(--text-forgot);
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.forgot a:hover { color: var(--brand); }
+
+/* ---- LADO DERECHO ---- */
+.login__right {
+  min-height: 100vh;
+  background-image: url("../img/fondo-pagina.png");
+  background-size: cover;
+  background-position: center;
+  animation: zoomFade 1.2s ease forwards;
+}
+
+/* ---- OJO ---- */
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 50px;
+}
+
+.input__action {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--text-placeholder);
+  display: flex;
+  transition: color 0.2s;
+}
+
+.input__action svg { fill: currentColor; }
+.input__action:hover { color: var(--brand); }
+
+/* ---- ANIMACIONES ---- */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomFade {
+  from { opacity: 0; transform: scale(1.06); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes floatBubble {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-20px); }
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 900px) {
+  .login { grid-template-columns: 1fr; }
+  .login__right { min-height: 40vh; order: -1; }
+  .login__left { padding: 24px 20px 40px; }
+  .panel { width: 100%; }
+  .brand__logo { transform: translate(0, 0); width: 200px; margin: 0 auto; }
+  h1 { font-size: 42px; margin-bottom: 24px; text-align: center; }
+  .field input, .btn, .forgot { width: 100%; }
+}

@@ -1,0 +1,30 @@
+# ══ CREDENCIALES Y ARCHIVOS SENSIBLES ══
+config/database.php
+config/sightengine.php
+config/mail.php
+config/env.php
+.env
+.env.local
+
+# ══ UPLOADS DE USUARIOS ══
+uploads/
+public/uploads/
+
+# ══ LOGS ══
+logs/
+*.log
+
+# ══ SISTEMA OPERATIVO ══
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ══ EDITORES ══
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ══ DEPENDENCIAS ══
+vendor/
+node_modules/
