@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="vendor/adminlte/dist/img/J_logo.jpeg">
+  <img src="imagenes/logovitalis">
 </p>
 
 <h1 align="center">V I T A L I S</h1>
